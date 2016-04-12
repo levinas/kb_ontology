@@ -134,7 +134,7 @@ sub json_key_to_header_tag {
 }
 
 
-# https://oboformat.googlecode.com/svn/trunk/doc/GO.format.obo-1_2.html#S.2
+# ftp://ftp.geneontology.org/pub/go/www/GO.format.obo-1_4.shtml
 sub get_tag_info {
     my @header_tag_order = qw(
                                  format-version
