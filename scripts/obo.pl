@@ -39,9 +39,8 @@ if ($to_json || $ftype eq 'obo' && !$from_json) {
 sub obo_to_json {
     my ($input) = @_;
     open(OBO, "<$input") or die "Could not open $input";
-    my $obj;
     my ($stanza, $type) = parse_stanza(\*OBO, 'Header');
-    $obj->{header} = $stanza;
+    my $obj = $stanza;
     while ($type) {
         my ($stanza, $section, $next_type);
         ($stanza, $next_type) = parse_stanza(\*OBO, $type);
@@ -56,7 +55,7 @@ sub obo_to_json {
 sub json_to_obo {
     my ($input) = @_;
     my $obj = from_json(slurp($input));
-    write_stanza($obj->{header}, 'Header');
+    write_stanza($obj, 'Header');
     my @types = qw(Term Typedef Instance);
     for my $type (@types) {
         my $key = lc($type)."_hash";
@@ -71,7 +70,8 @@ sub json_to_obo {
 
 sub write_stanza {
     my ($hash, $type) = @_;
-    my @tags = sort { tag_order($type, $a) <=> tag_order($type, $b) } keys %$hash;
+    my @tags = sort { tag_order($type, $a) <=> tag_order($type, $b) }
+               grep { tag_order($type, $_) } keys %$hash;
     for my $k (@tags) {
         my $v = $hash->{$k};
         my $key = $type eq 'Header' ? json_key_to_header_tag($k) : $k;
