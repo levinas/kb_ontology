@@ -13895,9 +13895,9 @@ def: "OBSOLETE. A plant cell that is part of a male gametophyte." [POC:Ramona_Wa
 comment: This term was made obsolete because it is not appropriate for non-seed plants.
 synonym: "c&#233lula microgametof&#237tica (Spanish)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "小配偶体細胞 (Japanese)" EXACT Japanese [NIG:Yukiko_Yamazaki]
-is_obsolete: true
 created_by: rwalls
 creation_date: 2010-05-07T02:36:55Z
+is_obsolete: true
 
 [Term]
 id: PO:0025028
@@ -17691,11 +17691,11 @@ synonym: "flower calyptra" EXACT []
 synonym: "flower operculum" EXACT []
 synonym: "蘚帽花蓋、花被  (Japanese)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 xref: PO_GIT:312
+created_by: rwalls
+creation_date: 2011-04-26T08:45:55Z
 is_obsolete: true
 consider: PO:0025329
 consider: PO:0025330
-created_by: rwalls
-creation_date: 2011-04-26T08:45:55Z
 
 [Term]
 id: PO:0025300
@@ -21992,9 +21992,9 @@ def: "OBSOLETE. A plant growth and development phase that begins with either mei
 comment: The life cycle of all plants is characterized by the alternation of phases (or generations). The sporophytic phase has twice the chromosome complement of the gametophytic phase.
 synonym: "fase del ciclo de vida de la plant (Spanish)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "植物生活環段階 (Japanese)" EXACT Japanese [NIG:Yukiko_Yamazaki]
-is_obsolete: true
 created_by: rwalls
 creation_date: 2010-07-15T02:54:57Z
+is_obsolete: true
 
 [Term]
 id: PO:0028002
@@ -23608,4 +23608,3 @@ name: precedes
 xref: BFO:0000063
 created_by: Laurel_Cooper
 creation_date: 2015-06-04T17:18:40Z
-
