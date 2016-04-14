@@ -121,20 +121,27 @@ module KBaseOntology {
         list<string> treat_xrefs_as_is_a;
         list<string> remark;
         string ontology;
-        mapping<string, OntologyTerm> term_hash;
-        mapping<string, OntologyTypedef> typedef_hash;
-        mapping<string, OntologyInstance> instance_hash;
+        mapping<string, list<OntologyTerm>> term_hash;
+        mapping<string, list<OntologyTypedef>> typedef_hash;
+        mapping<string, list<OntologyInstance>> instance_hash;
     } OntologyDictionary;
 
 
     /*
-       @optional name equiv_name
+       @optional equiv_name
+    */
+    typedef structure {
+        string equiv_term;
+        string equiv_name;
+    } EquivalentTerm;
+
+    /*
+       @optional name
     */
     typedef structure {
         string name;
-        string equiv_term;
-        string equiv_name;
-    } TranslatedTerm;
+        list<EquivalentTerm> equiv_terms;
+    } TranslationRecord;
 
     /*
        @optional comment
@@ -143,7 +150,7 @@ module KBaseOntology {
         string comment;
         string ontology1;
         string ontology2;
-        mapping<string, TranslatedTerm> translation;
+        mapping<string, TranslationRecord> translation;
     } OntologyTranslation;
 
 };
