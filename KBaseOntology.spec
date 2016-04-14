@@ -126,4 +126,24 @@ module KBaseOntology {
         mapping<string, OntologyInstance> instance_hash;
     } OntologyDictionary;
 
+
+    /*
+       @optional name equiv_name
+    */
+    typedef structure {
+        string name;
+        string equiv_term;
+        string equiv_name;
+    } TranslatedTerm;
+
+    /*
+       @optional comment
+    */
+    typedef structure {
+        string comment;
+        string ontology1;
+        string ontology2;
+        mapping<string, TranslatedTerm> translation;
+    } OntologyTranslation;
+
 };
