@@ -16,6 +16,9 @@ https://raw.githubusercontent.com/Planteome/plant-environment-ontology/master/pl
 Microbial Environment Ontology (ENVO):
 https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.obo
 
+Ontology representation of the NCBI organismal taxonomy (NCBITaxon)
+http://purl.obolibrary.org/obo/ncbitaxon.obo
+
 ## Ontology Mapping
 
 Ensembl GO ftp site:
