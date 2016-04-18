@@ -1,5 +1,7 @@
 #! /usr/bin/env perl
 
+# This script is superceded by ont.pl
+
 use strict;
 use Data::Dumper;
 use JSON;
