@@ -19,7 +19,18 @@ https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.obo
 Ontology representation of the NCBI organismal taxonomy (NCBITaxon)
 http://purl.obolibrary.org/obo/ncbitaxon.obo
 
-## Ontology Mapping
+## Ontology Translation
+
+EC2GO:
+http://www.geneontology.org/external2go/ec2go
+
+UniProtKB_Keywords2GO:
+http://www.geneontology.org/external2go/uniprotkb_kw2go
+
+PFAM2GO:
+http://www.geneontology.org/external2go/pfam2go
+
+## Ontology Instance Mapping
 
 Ensembl GO ftp site:
 ftp://ftp.gramene.org/pub/gramene/CURRENT_RELEASE/data/ontology/go/
