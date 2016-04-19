@@ -19,6 +19,11 @@ https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.obo
 Ontology representation of the NCBI organismal taxonomy (NCBITaxon)
 http://purl.obolibrary.org/obo/ncbitaxon.obo
 
+SEED Subsystem Ontology (SSO):
+https://github.com/levinas/kb_ontology/blob/master/data/obo/sso.obo
+format-version: 0.1
+data-version: releases/2016-04-18
+
 ## Ontology Translation
 
 EC2GO:
