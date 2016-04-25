@@ -57,6 +57,7 @@ sub obo_to_json {
         $type = $next_type;
     }
     close(OBO);
+    # add_closures($obj);
     print to_json($obj);
 }
 
@@ -133,6 +134,136 @@ sub json_to_trans {
             print $_->{equiv_name}.' ; ' if $_->{equiv_name};
             print $_->{equiv_term}."\n";
         }
+    }
+}
+
+sub add_closures {
+    my ($obj) = @_;
+    my $typedefH = $obj->{typedef_hash} or return;
+    my $termH = $obj->{term_hash} or return;
+
+    my $toH = get_transitive_over_hash($typedefH);
+    my $t = transpose_sparse_matrix($toH);
+    # print STDERR '$t = '. Dumper($t);
+
+    my $closure;
+
+    for my $id (keys %$termH) {
+        my $relationship = $termH->{$id}->{relationship} or next;
+        my @rels = map { rel_and_id_of($_) } @$relationship;
+        for (@rels) {
+            my ($rel, $id2) = @$_;
+            # print join("\t", $id, $rel, $id2) . "\n";
+            my $impacted = $t->{$rel} or next;
+            for my $rel2 (keys %$impacted) {
+                $closure->{$rel2}->{$id}->{$id2} = 1;
+            }
+        }
+    }
+
+    print STDERR '$closure = '. Dumper($closure);
+    for my $rel (keys %$closure) {
+        compute_transitive_closure($closure->{$rel});
+    }
+
+    print STDERR '$closure = '. Dumper($closure);
+
+    exit;
+}
+
+sub get_transitive_over_hash {
+    my ($r) = @_;              # relationship object
+    my $isaM;                  # isa transitive closure map
+
+    # compute transitive closure of the isa hash
+    for my $id (keys %$r) {
+        my $val = $r->{$id}->{is_a} or next;
+        $isaM->{$id}->{id_of($_)} = 1 for @$val;
+    }
+    compute_transitive_closure($isaM);
+    my $isaMt = transpose_sparse_matrix($isaM);
+
+    my $toH;
+    for my $id (keys %$r) {
+        my @over;
+        push @over, $id if $r->{$id}->{is_transitive} == 1 || $r->{$id}->{is_transitive} =~ /true/i;
+        my $val = $r->{$id}->{transitive_over};
+        if ($val) {
+            for my $v (map { id_of($_) } @$val) {
+                push @over, $v;
+            }
+        }
+        next unless @over;
+        for my $v (@over) {
+            $toH->{$id}->{$v} = 1;
+            my $v_isa_of = $isaMt->{$v} or next;
+            $toH->{$id}->{$_} = 1 + $isaMt->{$v}->{$_} for keys %$v_isa_of;
+        }
+    }
+
+    return $toH;
+}
+
+sub transpose_sparse_matrix {
+    my ($m) = @_;
+    my $t;
+    for my $u (keys %$m) {
+        my $e = $m->{$u} or next;
+        for my $v (keys %$e) {
+            $t->{$v}->{$u} = $m->{$u}->{$v};
+        }
+    }
+    return $t;
+}
+
+sub compute_transitive_closure {
+    my ($g) = @_;               # graph with edges initialized
+    my %seen;
+    for my $v1 (keys %$g) {
+        $seen{$v1} = 1;
+        for my $v2 (keys %{$g->{$v1}}) {
+            $seen{$v2} = 1;
+        }
+    }
+    my @v = sort keys %seen;
+    # Floyd–Warshall algorithm
+    for my $i (@v) {
+        for my $j (@v) {
+            for my $k (@v) {
+                next if "$k" eq "$i" || "$k" eq "$j" || "$i" eq "$j";
+                next unless $g->{$i} && $g->{$k} && $g->{$i}->{$k} && $g->{$k}->{$j};
+                my $dist = $g->{$i}->{$k} + $g->{$k}->{$j};
+                $g->{$i}->{$j} = $dist if !$g->{$i}->{$j} || $g->{$i}->{$j} > $dist;
+            }
+        }
+    }
+    return $g;
+}
+
+sub test_compute_transitive_closure {
+    my $g;
+    $g->{1}->{2} = 1;
+    $g->{2}->{3} = 1;
+    $g->{3}->{4} = 1;
+    $g->{1}->{3} = 1;
+    $g->{1}->{4} = 5;
+    print 'Before: '. Dumper($g);
+    compute_transitive_closure($g);
+    print 'After: '. Dumper($g);
+}
+
+sub id_of {
+    my ($term_with_name) = @_;
+    if ($term_with_name =~ /^(\S+) ! /) {
+        return $1;
+    }
+    return $term_with_name;
+}
+
+sub rel_and_id_of {
+    my ($relationship_with_name) = @_;
+    if ($relationship_with_name =~ /^(\S+) (\S+) ! /) {
+        return [$1, $2];
     }
 }
 
