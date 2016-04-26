@@ -57,7 +57,7 @@ sub obo_to_json {
         $type = $next_type;
     }
     close(OBO);
-    # add_closures($obj);
+    add_closures($obj);
     print to_json($obj);
 }
 
@@ -143,32 +143,89 @@ sub add_closures {
     my $termH = $obj->{term_hash} or return;
 
     my $toH = get_transitive_over_hash($typedefH);
-    my $t = transpose_sparse_matrix($toH);
-    # print STDERR '$t = '. Dumper($t);
 
-    my $closure;
-
-    for my $id (keys %$termH) {
+    my $relH;
+    my @terms = keys %$termH;
+    for my $id (@terms) {
         my $relationship = $termH->{$id}->{relationship} or next;
         my @rels = map { rel_and_id_of($_) } @$relationship;
         for (@rels) {
             my ($rel, $id2) = @$_;
-            # print join("\t", $id, $rel, $id2) . "\n";
-            my $impacted = $t->{$rel} or next;
-            for my $rel2 (keys %$impacted) {
-                $closure->{$rel2}->{$id}->{$id2} = 1;
+            $relH->{$rel}->{$id}->{$id2} = 1;
+        }
+    }
+
+    my $closure = compute_transitive_over_relationships($relH, $toH);
+    for my $id (@terms) {
+        for my $rel (keys %$relH) {
+            my $hash = $closure->{$rel}->{$id} or next;
+            my @list = sort { $hash->{$a} <=> $hash->{$b} || $a cmp $b } keys %$hash;
+            $obj->{term_hash}->{$id}->{closures}->{$rel} = \@list;
+        }
+    }
+
+}
+
+sub compute_transitive_over_relationships {
+    my ($relH, $toH) = @_;
+
+    my $rtH = transpose_sparse_matrix($toH);
+
+    my (@q, $fwd, $rev);
+    for my $rel (keys %$relH) {
+        my $g = $relH->{$rel} or next;
+        for my $u (keys %$g) {
+            my $gu = $g->{$u} or next;
+            for my $v (keys %$gu) {
+                $fwd->{$rel}->{$u}->{$v} = $gu->{$v};
+                $rev->{$rel}->{$v}->{$u} = $gu->{$v};
+                push @q, [$rel, $u, $v];
+            }
+        }
+    }
+    # print STDERR '$fwd = '. Dumper($fwd);
+    # print STDERR '$rev = '. Dumper($rev);
+
+    while (@q > 0) {
+        my $e = shift @q;
+        my ($rel, $u, $v) = @$e;
+        # u -(rel)-> v -(r2)-> x   =->   u -(rel)- x
+        my $r2fwdH = $toH->{$rel};
+        if ($r2fwdH) {
+            for my $r2 (keys %$r2fwdH) {
+                my $h = $fwd->{$r2} or next;
+                $h = $h->{$v} or next;
+                for my $x (keys %$h) {
+                    my $dist = $fwd->{$rel}->{$u}->{$v} + $fwd->{$r2}->{$v}->{$x};
+                    my $def  = $fwd->{$rel} && $fwd->{$rel}->{$u} && $fwd->{$rel}->{$u}->{$x};
+                    if (!$def || $dist < $fwd->{$rel}->{$u}->{$x}) {
+                        $fwd->{$rel}->{$u}->{$x} = $dist;
+                        $rev->{$rel}->{$x}->{$u} = $dist;
+                        push @q, [$rel, $u, $x];
+                    }
+                }
+            }
+        }
+        # v <-(rel)- u <-(r2)- x   =->   v <-(r2)- x
+        my $r2revH = $rtH->{$rel};
+        if ($r2revH) {
+            for my $r2 (keys %$r2revH) {
+                my $h = $rev->{$r2} or next;
+                $h = $h->{$u} or next;
+                for my $x (keys %$h) {
+                    my $dist = $rev->{$rel}->{$v}->{$u} + $rev->{$r2}->{$u}->{$x};
+                    my $def  = $rev->{$r2} && $rev->{$r2}->{$v} && $rev->{$r2}->{$v}->{$x};
+                    if (!$def || $dist < $rev->{$r2}->{$v}->{$x}) {
+                        $rev->{$r2}->{$v}->{$x} = $dist;
+                        $fwd->{$r2}->{$x}->{$v} = $dist;
+                        push @q, [$r2, $x, $v];
+                    }
+                }
             }
         }
     }
 
-    print STDERR '$closure = '. Dumper($closure);
-    for my $rel (keys %$closure) {
-        compute_transitive_closure($closure->{$rel});
-    }
-
-    print STDERR '$closure = '. Dumper($closure);
-
-    exit;
+    return $fwd;
 }
 
 sub get_transitive_over_hash {
@@ -250,6 +307,65 @@ sub test_compute_transitive_closure {
     print 'Before: '. Dumper($g);
     compute_transitive_closure($g);
     print 'After: '. Dumper($g);
+}
+
+
+sub test_compute_transitive_closure_sparse {
+    my $g;
+    $g->{1}->{2} = 1;
+    $g->{2}->{3} = 1;
+    $g->{3}->{4} = 1;
+    $g->{1}->{4} = 5;
+    $g->{1}->{3} = 0.1;
+    print 'Before: '. Dumper($g);
+    my $g = compute_transitive_closure_sparse($g);
+    print 'After: '. Dumper($g);
+}
+
+sub compute_transitive_closure_sparse {
+    # works only when length of all edges are the same
+    my ($g) = @_;
+
+    my ($fwd, $rev);
+    my @q;
+    for my $u (keys %$g) {
+        my $gu = $g->{$u} or next;
+        for my $v (keys %$gu) {
+            $fwd->{$u}->{$v} = $gu->{$v};
+            $rev->{$v}->{$u} = $gu->{$v};
+            push @q, [$u, $v];
+        }
+    }
+
+    while (@q > 0) {
+        my $e = shift @q;
+        # print join(",", @$e) . "\n";
+        my ($u, $v) = @$e;
+        if ($fwd->{$v}) {
+            for my $x (keys %{$fwd->{$v}}) { # u -> v -> x
+                my $d0 = $fwd->{$u}->{$x};
+                my $d = $fwd->{$u}->{$v} + $fwd->{$v}->{$x};
+                if (!$d0 || $d < $d0) {
+                    $fwd->{$u}->{$x} = $d;
+                    $rev->{$x}->{$u} = $d;
+                    push @q, [$u, $x];
+                }
+            }
+        }
+        if ($rev->{$u}) {
+            for my $x (keys %{$rev->{$u}}) { # x -> u -> v
+                my $d0 = $fwd->{$x}->{$v};
+                my $d = $fwd->{$x}->{$u} + $fwd->{$u}->{$v};
+                if (!$d0 || $d < $d0) {
+                    $fwd->{$x}->{$v} = $d;
+                    $rev->{$v}->{$x} = $d;
+                    push @q, [$x, $v];
+                }
+            }
+        }
+    }
+
+    return $fwd;
 }
 
 sub id_of {
