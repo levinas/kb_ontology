@@ -58,7 +58,7 @@ sub obo_to_json {
     }
     close(OBO);
     add_closures($obj);
-    print to_json($obj);
+    print to_json($obj, { utf8  => 1 });
 }
 
 sub json_to_obo {
@@ -112,7 +112,7 @@ sub trans_to_json {
     $obj->{ontology1} = $ont1;
     $obj->{ontology2} = $ont2;
     $obj->{translation} = $trans;
-    print to_json($obj);
+    print to_json($obj, { utf8  => 1 });
 }
 
 sub json_to_trans {
@@ -139,10 +139,15 @@ sub json_to_trans {
 
 sub add_closures {
     my ($obj) = @_;
-    my $typedefH = $obj->{typedef_hash} or return;
+    my $typedefH = $obj->{typedef_hash};
     my $termH = $obj->{term_hash} or return;
 
-    my $toH = get_transitive_over_hash($typedefH);
+    my $toH = get_transitive_over_hash($typedefH, 'transitive_over_isa');
+    # every relationship is transtive in some way is also transitive over 'is_a'
+    $toH->{is_a}->{is_a} = 1;
+    for my $id (keys %$toH) {
+        $toH->{$id}->{is_a} = 1;
+    }
 
     my $relH;
     my @terms = keys %$termH;
@@ -154,13 +159,20 @@ sub add_closures {
             $relH->{$rel}->{$id}->{$id2} = 1;
         }
     }
+    for my $id (@terms) {
+        my $isa = $termH->{$id}->{is_a} or next;
+        my @id2s = map { id_of($_) } @$isa;
+        for my $id2 (@id2s) {
+            $relH->{is_a}->{$id}->{$id2} = 1;
+        }
+    }
 
     my $closure = compute_transitive_over_relationships($relH, $toH);
     for my $id (@terms) {
         for my $rel (keys %$relH) {
             my $hash = $closure->{$rel}->{$id} or next;
-            my @list = sort { $hash->{$a} <=> $hash->{$b} || $a cmp $b } keys %$hash;
-            $obj->{term_hash}->{$id}->{closures}->{$rel} = \@list;
+            my @list = map { [ $_, $hash->{$_} ] } sort { $hash->{$a} <=> $hash->{$b} || $a cmp $b } keys %$hash;
+            $obj->{term_hash}->{$id}->{relationship_closure}->{$rel} = \@list;
         }
     }
 
@@ -229,10 +241,11 @@ sub compute_transitive_over_relationships {
 }
 
 sub get_transitive_over_hash {
-    my ($r) = @_;              # relationship object
-    my $isaM;                  # isa transitive closure map
+    my ($r) = @_;  # relationship object parsed from 'typedef' section in OBO
+    return unless $r;
 
-    # compute transitive closure of the isa hash
+    # compute transitive closure of the isa relationship among the relationships
+    my $isaM;
     for my $id (keys %$r) {
         my $val = $r->{$id}->{is_a} or next;
         $isaM->{$id}->{id_of($_)} = 1 for @$val;
@@ -378,7 +391,7 @@ sub id_of {
 
 sub rel_and_id_of {
     my ($relationship_with_name) = @_;
-    if ($relationship_with_name =~ /^(\S+) (\S+) ! /) {
+    if ($relationship_with_name =~ /^(\S+) (\S+)/) { # some obo files do not have ' ! name' that follows the first two fields
         return [$1, $2];
     }
 }
