@@ -151,6 +151,143 @@ is_a: GO:2001316 ! kojic acid metabolic process
 created_by: rfoulger
 creation_date: 2012-04-18T09:22:46Z
 
+[Term]
+id: GO:0008173
+name: RNA methyltransferase activity
+namespace: molecular_function
+def: "Catalysis of the transfer of a methyl group from a donor to a nucleoside residue in an RNA molecule." [GOC:mah]
+comment: Note that the methyl donor is usually S-adenosyl-L-methionine, but there is at least one exception (see GO:0030698).
+subset: gosubset_prok
+xref: EC:2.1.1.-
+xref: Reactome:REACT_10002 "snRNA Cap hypermethylation, Homo sapiens"
+xref: Reactome:REACT_102135 "snRNA Cap hypermethylation, Danio rerio"
+xref: Reactome:REACT_108169 "snRNA Cap hypermethylation, Rattus norvegicus"
+xref: Reactome:REACT_29381 "snRNA Cap hypermethylation, Gallus gallus"
+xref: Reactome:REACT_54083 "snRNA Cap hypermethylation, Bos taurus"
+xref: Reactome:REACT_79845 "snRNA Cap hypermethylation, Xenopus tropicalis"
+xref: Reactome:REACT_82745 "snRNA Cap hypermethylation, Drosophila melanogaster"
+xref: Reactome:REACT_88858 "snRNA Cap hypermethylation, Canis familiaris"
+xref: Reactome:REACT_95210 "snRNA Cap hypermethylation, Mus musculus"
+is_a: GO:0008168 ! methyltransferase activity
+relationship: part_of GO:0001510 ! RNA methylation
+
+[Term]
+id: GO:0008174
+name: mRNA methyltransferase activity
+namespace: molecular_function
+def: "Catalysis of the transfer of a methyl group from S-adenosyl-L-methionine to a nucleoside residue in an mRNA molecule." [GOC:mah]
+subset: gosubset_prok
+xref: EC:2.1.1.-
+is_a: GO:0008173 ! RNA methyltransferase activity
+is_a: GO:0008757 ! S-adenosylmethionine-dependent methyltransferase activity
+relationship: part_of GO:0080009 ! mRNA methylation
+
+[Term]
+id: GO:0008175
+name: tRNA methyltransferase activity
+namespace: molecular_function
+def: "Catalysis of the transfer of a methyl group from a donor to a nucleoside residue in a tRNA molecule." [GOC:mah]
+subset: gosubset_prok
+xref: EC:2.1.1.-
+is_a: GO:0008173 ! RNA methyltransferase activity
+relationship: part_of GO:0030488 ! tRNA methylation
+
+[Term]
+id: GO:0008176
+name: tRNA (guanine-N7-)-methyltransferase activity
+namespace: molecular_function
+def: "Catalysis of the reaction: S-adenosyl-L-methionine + tRNA = S-adenosyl-L-homocysteine + tRNA containing N7-methylguanine." [EC:2.1.1.33]
+subset: gosubset_prok
+synonym: "7-methylguanine transfer ribonucleate methylase activity" EXACT [EC:2.1.1.33]
+synonym: "N7-methylguanine methylase activity" EXACT [EC:2.1.1.33]
+synonym: "S-adenosyl-L-methionine:tRNA (guanine-7-N-)-methyltransferase activity" EXACT [EC:2.1.1.33]
+synonym: "S-adenosyl-L-methionine:tRNA (guanine-N7-)-methyltransferase activity" EXACT [EC:2.1.1.33]
+synonym: "transfer ribonucleate guanine 7-methyltransferase activity" EXACT [EC:2.1.1.33]
+synonym: "tRNA guanine 7-methyltransferase activity" EXACT [EC:2.1.1.33]
+xref: EC:2.1.1.33
+xref: MetaCyc:TRNA-GUANINE-N7--METHYLTRANSFERASE-RXN
+is_a: GO:0016423 ! tRNA (guanine) methyltransferase activity
+relationship: part_of GO:0036265 ! RNA (guanine-N7)-methylation
+
+[Term]
+id: GO:0036265
+name: RNA (guanine-N7)-methylation
+namespace: biological_process
+def: "The addition of a methyl group to the N7 atom in the base portion of a guanine nucleotide residue in an RNA molecule." [GOC:BHF, GOC:rl]
+is_a: GO:0001510 ! RNA methylation
+relationship: part_of GO:0009452 ! 7-methylguanosine RNA capping
+created_by: rfoulger
+creation_date: 2012-06-25T10:28:25Z
+
+[Term]
+id: GO:0038009
+name: regulation of signal transduction by receptor internalization
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of signal transduction by the movement of a signaling receptor from the plasma membrane to the inside of the cell. Receptor internalization can have a positive or negative effect on a signaling pathway." [GOC:bf, GOC:signaling, PMID:17011816, PMID:19696798]
+synonym: "regulation of signaling pathway by receptor endocytosis" EXACT [GOC:bf]
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0031623 ! receptor internalization
+intersection_of: GO:0031623 ! receptor internalization
+intersection_of: regulates GO:0007165 ! signal transduction
+relationship: regulates GO:0007165 ! signal transduction
+created_by: rfoulger
+creation_date: 2011-06-23T03:28:47Z
+
+[Term]
+id: GO:0007154
+name: cell communication
+namespace: biological_process
+def: "Any process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:mah]
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+xref: Wikipedia:Cell_signaling
+is_a: GO:0044763 ! single-organism cellular process
+
+[Term]
+id: GO:0007165
+name: signal transduction
+namespace: biological_process
+alt_id: GO:0023033
+def: "The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell." [GOC:go_curators, GOC:mtg_signaling_feb11]
+comment: Note that signal transduction is defined broadly to include a ligand interacting with a receptor, downstream signaling steps and a response being triggered. A change in form of the signal in every step is not necessary. Note that in many cases the end of this process is regulation of the initiation of transcription. Note that specific transcription factors may be annotated to this term, but core/general transcription machinery such as RNA polymerase should not.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "signaling cascade" NARROW []
+synonym: "signaling pathway" RELATED []
+synonym: "signalling cascade" NARROW []
+synonym: "signalling pathway" RELATED [GOC:mah]
+xref: Reactome:REACT_100624 "EGFR interacts with phospholipase C-gamma, Gallus gallus"
+xref: Reactome:REACT_102354 "EGFR interacts with phospholipase C-gamma, Canis familiaris"
+xref: Reactome:REACT_112130 "EGFR interacts with phospholipase C-gamma, Oryza sativa"
+xref: Reactome:REACT_112549 "EGFR interacts with phospholipase C-gamma, Arabidopsis thaliana"
+xref: Reactome:REACT_113151 "EGFR interacts with phospholipase C-gamma, Mycobacterium tuberculosis"
+xref: Reactome:REACT_113601 "EGFR interacts with phospholipase C-gamma, Drosophila melanogaster"
+xref: Reactome:REACT_113964 "EGFR interacts with phospholipase C-gamma, Bos taurus"
+xref: Reactome:REACT_114657 "EGFR interacts with phospholipase C-gamma, Dictyostelium discoideum"
+xref: Reactome:REACT_114690 "EGFR interacts with phospholipase C-gamma, Saccharomyces cerevisiae"
+xref: Reactome:REACT_114820 "EGFR interacts with phospholipase C-gamma, Sus scrofa"
+xref: Reactome:REACT_114910 "EGFR interacts with phospholipase C-gamma, Caenorhabditis elegans"
+xref: Reactome:REACT_115037 "EGFR interacts with phospholipase C-gamma, Plasmodium falciparum"
+xref: Reactome:REACT_115147 "EGFR interacts with phospholipase C-gamma, Schizosaccharomyces pombe"
+xref: Reactome:REACT_12478 "EGFR interacts with phospholipase C-gamma, Homo sapiens"
+xref: Reactome:REACT_31232 "EGFR interacts with phospholipase C-gamma, Rattus norvegicus"
+xref: Reactome:REACT_78535 "EGFR interacts with phospholipase C-gamma, Xenopus tropicalis"
+xref: Reactome:REACT_89740 "EGFR interacts with phospholipase C-gamma, Taeniopygia guttata"
+xref: Reactome:REACT_93680 "EGFR interacts with phospholipase C-gamma, Danio rerio"
+xref: Reactome:REACT_98872 "EGFR interacts with phospholipase C-gamma, Mus musculus"
+xref: Wikipedia:Signal_transduction
+is_a: GO:0050794 ! regulation of cellular process
+relationship: part_of GO:0007154 ! cell communication
+relationship: part_of GO:0044700 ! single organism signaling
+relationship: part_of GO:0051716 ! cellular response to stimulus
+
 [Typedef]
 id: ends_during
 name: ends_during
