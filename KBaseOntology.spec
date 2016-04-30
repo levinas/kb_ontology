@@ -121,9 +121,9 @@ module KBaseOntology {
         list<string> treat_xrefs_as_is_a;
         list<string> remark;
         string ontology;
-        mapping<string, list<OntologyTerm>> term_hash;
-        mapping<string, list<OntologyTypedef>> typedef_hash;
-        mapping<string, list<OntologyInstance>> instance_hash;
+        mapping<string, OntologyTerm> term_hash;
+        mapping<string, OntologyTypedef> typedef_hash;
+	mapping<string, OntologyInstance> instance_hash;
     } OntologyDictionary;
 
 

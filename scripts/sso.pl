@@ -22,6 +22,7 @@ my %roleH = map { chomp; my ($sso, $role) = split /\t/; $role => $sso } @lines;
 my @new_roles = sort map { chomp; s/^\s+//; s/\s+$//; $_ } `cat $new_file`;
 
 for my $role (@new_roles) {
+    $role =~ s/ , /, /;
     next if black_listed($role);
     next if $roleH{$role};
     my $sso = new_sso();
