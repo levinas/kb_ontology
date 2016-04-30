@@ -683,6 +683,7 @@ sub make_tag_info_hash {
 sub print_spec {
     $tag_info ||= get_tag_info();
     print "module KBaseOntology {\n\n";
+    print get_ontology_relationship_closure_spec()."\n";
     my @types = qw(Term Typedef Instance);
     for my $type (@types) {
         my ($record, $optionals) = get_spec_record_for_type($type);
@@ -691,11 +692,19 @@ sub print_spec {
     my ($base, $optionals) = get_spec_record_for_type('Header');
     push @$optionals, ('typedef_hash', 'instance_hash');
     for my $type (@types) {
-        push @$base, [ "mapping<string, list<Ontology$type>>", lc($type).'_hash' ];
+        push @$base, [ "mapping<string, Ontology$type>", lc($type).'_hash' ];
     }
     print_record('OntologyDictionary', $base, 4, $optionals);
     print get_ontology_translation_spec()."\n";
     print "};\n";
+}
+
+sub get_ontology_relationship_closure_spec {
+    return <<'End_Closure';
+
+    typedef tuple<string term, int distance> AncestralTerm;
+    typedef mapping<string, list<AncestralTerm>> RelatinoshipClosure;
+End_Closure
 }
 
 sub get_ontology_translation_spec {
@@ -740,6 +749,10 @@ sub get_spec_record_for_type {
         my $var = $tag;
         my $def = $multi ? 'list<string>' : 'string';
         push @record, [$def, $var];
+    }
+    if ($type eq 'Term') {
+        push @optionals, 'relationship_closure';
+        push @record, ['RelatinoshipClosure', 'relationship_closure'];
     }
     return (\@record, \@optionals);
 }
