@@ -102,10 +102,10 @@ module KBaseGenomes {
 		@id shock
 	*/
     typedef string Fasta_ref;
-    
+
     typedef string Feature_type;
     typedef int Bool;
-    
+
     /* Type spec for a "Contig" subobject in the "ContigSet" object
 
 		Contig_id id - ID of contig in contigset
@@ -159,7 +159,7 @@ module KBaseGenomes {
 		Fasta_ref fasta_ref;
 		list<Contig> contigs;
     } ContigSet;
-   
+
     /*
 		Type of a genome feature with possible values peg, rna
 	*/
@@ -179,7 +179,7 @@ module KBaseGenomes {
 		a "location" refers to a list of regions of DNA on contigs
     */
     typedef list<region_of_dna> location;
-    
+
     /*
 	Structure for a publication (from ER API)
 	also want to capture authors, journal name (not in ER)
@@ -215,7 +215,7 @@ module KBaseGenomes {
 
     */
     typedef tuple<Feature_id scored_fid, float score> coexpressed_fid;
-    
+
    	/*
 	Structure for a protein family
 		@optional query_begin query_end subject_begin subject_end score evalue subject_description release_version
@@ -237,9 +237,9 @@ module KBaseGenomes {
 		a notation by a curator of the genome object
     */
     typedef tuple<string comment, string annotator, float annotation_time> annotation;
-	
+
 	typedef string Analysis_event_id;
-    
+
     /*
     	@optional tool_name execution_time parameters hostname
     */
@@ -250,7 +250,7 @@ module KBaseGenomes {
 		list<string> parameters;
 		string hostname;
     } Analysis_event;
-	
+
 	/*
     	@optional weighted_hit_count hit_count existence_priority overlap_rules pyrrolysylprotein truncated_begin truncated_end existence_confidence frameshifted selenoprotein
     */
@@ -288,10 +288,10 @@ module KBaseGenomes {
 		float hit_count;
 		float weighted_hit_count;
     } Feature_quality_measure;
-	
+
 	/*
     	Structure for a single feature of a genome
-		
+
 		Should genome_id contain the genome_id in the Genome object,
 		the workspace id of the Genome object, a genomeref,
 		something else?
@@ -299,7 +299,7 @@ module KBaseGenomes {
 		We may want to add additional fields for other CDM functions
 		(e.g., atomic regulons, coexpressed fids, co_occurring fids,...)
 
-		@optional orthologs quality feature_creation_event md5 location function protein_translation protein_families subsystems publications subsystem_data aliases annotations regulon_data atomic_regulons coexpressed_fids co_occurring_fids dna_sequence protein_translation_length dna_sequence_length
+		@optional orthologs quality feature_creation_event md5 location function protein_translation protein_families subsystems publications subsystem_data aliases annotations regulon_data atomic_regulons coexpressed_fids co_occurring_fids dna_sequence protein_translation_length dna_sequence_length ontology
     */
     typedef structure {
 		Feature_id id;
@@ -324,8 +324,9 @@ module KBaseGenomes {
 		list<co_occurring_fid> co_occurring_fids;
 		Feature_quality_measure quality;
 		Analysis_event feature_creation_event;
+		mapping<string namespace, list<tuple<string ontology_term, string ontology_name>>> ontology;
     } Feature;
-	
+
 	/*
     	@optional genome closeness_measure
     */
@@ -384,14 +385,14 @@ module KBaseGenomes {
 		list<publication> publications;
 		list<Feature> features;
 		ContigSet_ref contigset_ref;
-		
+
 		Genome_quality_measure quality;
 		list<Close_genome> close_genomes;
 		list <Analysis_event> analysis_events;
     } Genome;
-    
+
 	/* Type spec for the "Protein" object
-	
+
 		Protein_id id - unique external ID of protein
 		string function - annotated function for protein
 		string md5 - md5 hash of protein sequence
@@ -401,7 +402,7 @@ module KBaseGenomes {
 		list<string> aliases - aliases for the protein
 		list<annotation> annotations - curator annotations on protein
 		list<subsystem_data> subsystem_data;
-		
+
 		@optional function
     	@searchable ws_subset id md5 function length aliases
 	*/
@@ -415,7 +416,7 @@ module KBaseGenomes {
 		list<string> aliases;
 		list<annotation> annotations;
     } Protein;
-   
+
    /* Type spec for the "ProteinSet" object
 
 		proteinset_id id - unique kbase ID of the protein set
@@ -439,22 +440,22 @@ module KBaseGenomes {
 		Fasta_ref fasta_ref;
 		list<Protein> proteins;
     } ProteinSet;
-    
+
     /*
        A function_probability is a (annotation, probability) pair associated with a gene
        An annotation is a "///"-delimited list of roles that could be associated with that gene.
     */
     typedef tuple<string annotation, float probability> function_probability;
 
-    /* Object to carry alternative functions and probabilities for genes in a genome    
+    /* Object to carry alternative functions and probabilities for genes in a genome
 
-        probanno_id id - ID of the probabilistic annotation object    
+        probanno_id id - ID of the probabilistic annotation object
         Genome_ref genome_ref - reference to genome probabilistic annotation was built for
         mapping<Feature_id, list<function_probability>> roleset_probabilities - mapping of features to list of alternative function_probability objects
         list<Feature_id> skipped_features - list of features in genome with no probability
-        
+
     	@searchable ws_subset id genome_ref skipped_features
-        
+
     */
     typedef structure {
 		ProbabilisticAnnotation_id id;
@@ -462,16 +463,16 @@ module KBaseGenomes {
 		mapping<Feature_id,list<function_probability>> roleset_probabilities;
 		list<Feature_id> skipped_features;
     } ProbabilisticAnnotation;
-    
+
     /* Structure for the "MetagenomeAnnotationOTUFunction" object
-		
+
 		list<string> reference_genes - list of genes associated with hit
 		string functional_role - annotated function
 		string kbid - kbase ID of OTU function in metagenome
 		int abundance - number of hits with associated role and OTU
 		float confidence - confidence of functional role hit
 		string confidence_type - type of functional role hit
-		
+
     	@searchable ws_subset id abundance confidence functional_role
 	*/
     typedef structure {
@@ -481,16 +482,16 @@ module KBaseGenomes {
 		int abundance;
 		float confidence;
     } MetagenomeAnnotationOTUFunction;
-     
+
     /* Structure for the "MetagenomeAnnotationOTU" object
-	
+
 		string name - name of metagenome OTU
 		string kbid - KBase ID of OTU of metagenome object
 		string source_id - ID used for OTU in metagenome source
 		string source - source OTU ID
 		list<MetagenomeAnnotationOTUFunction> functions - list of functions in OTU
-		
-    	@searchable ws_subset id name source_id source functions.[*].(id,abundance,confidence,functional_role) 
+
+    	@searchable ws_subset id name source_id source functions.[*].(id,abundance,confidence,functional_role)
 
 	*/
     typedef structure {
@@ -502,9 +503,9 @@ module KBaseGenomes {
 		string source;
 		list<MetagenomeAnnotationOTUFunction> functions;
     } MetagenomeAnnotationOTU;
-    
+
     /* Structure for the "MetagenomeAnnotation" object
-	
+
 		string type - type of metagenome object
 		string name - name of metagenome object
 		string kbid - KBase ID of metagenome object
@@ -512,7 +513,7 @@ module KBaseGenomes {
 		string source - source of metagenome data
 		string confidence_type - type of confidence score
 		list<MetagenomeAnnotationOTU> otus - list of otus in metagenome
-		
+
     	@searchable ws_subset type name id source_id source confidence_type otus.[*].(id,name,source_id,source,functions.[*].(id,abundance,confidence,functional_role))
 		@metadata ws type as Type
 		@metadata ws name as Name
@@ -529,14 +530,14 @@ module KBaseGenomes {
 		string confidence_type;
 		list<MetagenomeAnnotationOTU> otus;
     } MetagenomeAnnotation;
-    
+
     /*
 		Domain - a subobject holding information on a single protein domain
 		string id - numerical ID assigned by KBase
 		string source_id - assession ID from CDD database;
 		string type - type of CDD, possible values are cd, pfam, smart, COG, PRK, CHL
 		string name - name of CDD
-		string description - description of CDD		
+		string description - description of CDD
     */
     typedef structure {
 		string id;
@@ -545,7 +546,7 @@ module KBaseGenomes {
 		string name;
 		string description;
     } Domain;
-    
+
     /*
 		FeatureDomain - a subobject holding information on how a domain appears in a gene
 		string id - numerical ID assigned by KBase
@@ -553,7 +554,7 @@ module KBaseGenomes {
 		string type - type of CDD, possible values are cd, pfam, smart, COG, PRK, CHL
 		string name - name of CDD
 		string description - description of CDD
-		
+
 		@optional feature_ref domains
     */
     typedef structure {
@@ -564,7 +565,7 @@ module KBaseGenomes {
 		int feature_length;
 		list<tuple<string domain_ref,int identity,int alignment_length,int mismatches,int gaps,float protein_start,float protein_end,float domain_start,float domain_end,float evalue,float bit_score>> domains;
     } FeatureDomainData;
-    
+
     /*
     	GenomeDomainData object: this object holds all data regarding protein domains in a genome in KBase
 
@@ -578,11 +579,11 @@ module KBaseGenomes {
 		Genome_ref genome_ref;
 		int num_domains;
 		int num_features;
-		
+
 		list<Domain> domains;
 		list<FeatureDomainData> featuredomains;
 	} GenomeDomainData;
-	
+
 	/*
     	OrthologFamily object: this object holds all data for a single ortholog family in a metagenome
 
@@ -596,7 +597,7 @@ module KBaseGenomes {
 		string protein_translation;
 		list<tuple<string,float,string>> orthologs;
 	} OrthologFamily;
-	
+
 	/*
     	Pangenome object: this object holds all data regarding a pangenome
 
@@ -613,21 +614,21 @@ module KBaseGenomes {
     	list<Genome_ref> genome_refs;
     	list<OrthologFamily> orthologs;
 	} Pangenome;
-	
+
 	/*
     	GenomeComparisonGenome object: this object holds information about a genome in a genome comparison
     */
     typedef structure {
 		string id;
 		Genome_ref genome_ref;
-		mapping<string genome_id,tuple<int commonfamilies,int commonfunctions> > genome_similarity; 
+		mapping<string genome_id,tuple<int commonfamilies,int commonfunctions> > genome_similarity;
 		string name;
 		string taxonomy;
 		int features;
 		int families;
 		int functions;
     } GenomeComparisonGenome;
- 
+
     /*
     	GenomeComparisonFunction object: this object holds information about a genome in a function across all genomes
     */
@@ -644,7 +645,7 @@ module KBaseGenomes {
 		float fraction_consistent_families;
 		string most_consistent_family;
     } GenomeComparisonFunction;
-    
+
     /*
     	GenomeComparisonFamily object: this object holds information about a protein family across a set of genomes
     */
@@ -659,10 +660,10 @@ module KBaseGenomes {
 		float fraction_consistent_annotations;
 		string most_consistent_role;
     } GenomeComparisonFamily;
-    
+
     /*
     	GenomeComparisonData object: this object holds information about a multigenome comparison
-    	
+
     	@optional protcomp_ref pangenome_ref
     	@metadata ws core_functions as Core functions
 		@metadata ws core_families as Core families
@@ -681,4 +682,3 @@ module KBaseGenomes {
 		list<GenomeComparisonFunction> functions;
     } GenomeComparison;
 };
-
