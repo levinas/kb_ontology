@@ -6,9 +6,8 @@
     <field name="feature_type" type="string" indexed="true" stored="true" docValues="true"/>
     <field name="annotation" type="string" indexed="true" stored="true"/>
     <field name="protein_md5" type="string" indexed="true" stored="true"/>
-    <field name="go" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
-    <field name="go_evidence" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
-    <field name="ec" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
+    <field name="ontology" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
+    <field name="ontology_evidence" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
     <field name="text" type="text_custom" indexed="true" stored="false" multiValued="true"/>
     <field name="_version_" type="long" indexed="true" stored="true"/>
   </fields>
@@ -17,6 +16,7 @@
 
   <solrQueryParser defaultOperator="AND"/>
 
+  <copyField source="feature_id" dest="text"/>
   <copyField source="feature_type" dest="text"/>
   <copyField source="annotation" dest="text"/>
   <copyField source="go" dest="text"/>
