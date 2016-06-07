@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema name="feature_ontology" version="1.5">
+  <fields>
+    <field name="feature_id" type="string" indexed="true" stored="true" docValues="true"/>
+    <field name="feature_type" type="string" indexed="true" stored="true" docValues="true"/>
+    <field name="annotation" type="string" indexed="true" stored="true"/>
+    <field name="protein_md5" type="string" indexed="true" stored="true"/>
+    <field name="go" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
+    <field name="go_evidence" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
+    <field name="ec" type="string" indexed="true" stored="true" docValues="true" multiValued="true"/>
+    <field name="text" type="text_custom" indexed="true" stored="false" multiValued="true"/>
+    <field name="_version_" type="long" indexed="true" stored="true"/>
+  </fields>
+
+  <uniqueKey>feature_id</uniqueKey>
+
+  <solrQueryParser defaultOperator="AND"/>
+
+  <copyField source="feature_type" dest="text"/>
+  <copyField source="annotation" dest="text"/>
+  <copyField source="go" dest="text"/>
+  <copyField source="go_evidence" dest="text"/>
+  <copyField source="ec" dest="text"/>
+
+  <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
+  <fieldType name="tdates" class="solr.TrieDateField" precisionStep="6" positionIncrementGap="0" multiValued="true"/>
+  <fieldType name="tints" class="solr.TrieIntField" precisionStep="8" positionIncrementGap="0" multiValued="true"/>
+  <fieldType name="tfloats" class="solr.TrieFloatField" precisionStep="8" positionIncrementGap="0" multiValued="true"/>
+  <fieldType name="tlongs" class="solr.TrieLongField" precisionStep="8" positionIncrementGap="0" multiValued="true"/>
+  <fieldType name="tdoubles" class="solr.TrieDoubleField" precisionStep="8" positionIncrementGap="0" multiValued="true"/>
+
+  <xi:include href="schema_types.xml" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:fallback></xi:fallback>
+  </xi:include>
+
+</schema>

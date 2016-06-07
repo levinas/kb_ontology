@@ -1,0 +1,461 @@
+!version date: Tue May 10 12:46:24 CDT 2016
+!description: Mapping of SEED Subsystem Ontology to GO terms.
+!
+SSO:000000019 (S)-1-phenylethanol dehydrogenase (EC 1.1.1.311) > GO:anaerobic ethylbenzene catabolic process ; GO:0010130
+SSO:000000019 (S)-1-phenylethanol dehydrogenase (EC 1.1.1.311) > GO:nucleotide binding ; GO:0000166
+SSO:000000019 (S)-1-phenylethanol dehydrogenase (EC 1.1.1.311) > GO:oxidation-reduction process ; GO:0055114
+SSO:000000019 (S)-1-phenylethanol dehydrogenase (EC 1.1.1.311) > GO:oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor ; GO:0016616
+SSO:000000019 (S)-1-phenylethanol dehydrogenase (EC 1.1.1.311) > GO:protein homotetramerization ; GO:0051289
+SSO:000000064 16S rRNA (uracil(1498)-N(3))-methyltransferase (EC 2.1.1.193) > GO:cytoplasm ; GO:0005737
+SSO:000000064 16S rRNA (uracil(1498)-N(3))-methyltransferase (EC 2.1.1.193) > GO:methyltransferase activity ; GO:0008168
+SSO:000000064 16S rRNA (uracil(1498)-N(3))-methyltransferase (EC 2.1.1.193) > GO:rRNA processing ; GO:0006364
+SSO:000000073 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-acetyltransferase (EC 2.3.1.89) > GO:diaminopimelate biosynthetic process ; GO:0019877
+SSO:000000073 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-acetyltransferase (EC 2.3.1.89) > GO:lysine biosynthetic process via diaminopimelate ; GO:0009089
+SSO:000000073 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-acetyltransferase (EC 2.3.1.89) > GO:tetrahydrodipicolinate N-acetyltransferase activity ; GO:0047200
+SSO:000000077 2,3-butanediol dehydrogenase, S-alcohol forming, (R)-acetoin-specific (EC 1.1.1.4) > GO:acetoin catabolic process ; GO:0045150
+SSO:000000077 2,3-butanediol dehydrogenase, S-alcohol forming, (R)-acetoin-specific (EC 1.1.1.4) > GO:diacetyl reductase ((S)-acetoin forming) activity ; GO:0052588
+SSO:000000220 2-vinyl bacteriochlorophyllide hydratase BchF (EC 4.2.1.-) > GO:hydro-lyase activity ; GO:0016836
+SSO:000000220 2-vinyl bacteriochlorophyllide hydratase BchF (EC 4.2.1.-) > GO:light-independent bacteriochlorophyll biosynthetic process ; GO:0036070
+SSO:000000220 2-vinyl bacteriochlorophyllide hydratase BchF (EC 4.2.1.-) > GO:photosynthesis, dark reaction ; GO:0019685
+SSO:000000377 4-hydroxyphenylacetate decarboxylase activating enzyme > GO:4 iron, 4 sulfur cluster binding ; GO:0051539
+SSO:000000377 4-hydroxyphenylacetate decarboxylase activating enzyme > GO:glucose metabolic process ; GO:0006006
+SSO:000000377 4-hydroxyphenylacetate decarboxylase activating enzyme > GO:metal ion binding ; GO:0046872
+SSO:000000377 4-hydroxyphenylacetate decarboxylase activating enzyme > GO:oxidoreductase activity ; GO:0016491
+SSO:000000427 5-methyl-dCTP pyrophosphohydrolase (EC 3.6.1.-) > GO:DNA repair ; GO:0006281
+SSO:000000427 5-methyl-dCTP pyrophosphohydrolase (EC 3.6.1.-) > GO:hydrolase activity ; GO:0016787
+SSO:000000494 ABC transporter, ATP-binding protein EcsA > GO:ATP binding ; GO:0005524
+SSO:000000494 ABC transporter, ATP-binding protein EcsA > GO:ATPase activity ; GO:0016887
+SSO:000000494 ABC transporter, ATP-binding protein EcsA > GO:establishment of competence for transformation ; GO:0030420
+SSO:000000494 ABC transporter, ATP-binding protein EcsA > GO:sporulation resulting in formation of a cellular spore ; GO:0030435
+SSO:000000494 ABC transporter, ATP-binding protein EcsA > GO:transport ; GO:0006810
+SSO:000000536 AMP nucleosidase (EC 3.2.2.4) > GO:AMP nucleosidase activity ; GO:0008714
+SSO:000000536 AMP nucleosidase (EC 3.2.2.4) > GO:AMP salvage ; GO:0044209
+SSO:000000536 AMP nucleosidase (EC 3.2.2.4) > GO:cytosol ; GO:0005829
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:ATP binding ; GO:0005524
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:ATP-dependent RNA helicase activity ; GO:0004004
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:DNA binding ; GO:0003677
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:RNA secondary structure unwinding ; GO:0010501
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:cell division ; GO:0051301
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:double-strand break repair ; GO:0006302
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:response to drug ; GO:0042493
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:response to ionizing radiation ; GO:0010212
+SSO:000000606 ATP-dependent RNA helicase YejH > GO:translation ; GO:0006412
+SSO:000000671 Acetate permease ActP (cation/acetate symporter) > GO:acetate transmembrane transporter activity ; GO:0015123
+SSO:000000671 Acetate permease ActP (cation/acetate symporter) > GO:glycolate transmembrane transporter activity ; GO:0043879
+SSO:000000671 Acetate permease ActP (cation/acetate symporter) > GO:integral component of plasma membrane ; GO:0005887
+SSO:000000671 Acetate permease ActP (cation/acetate symporter) > GO:sodium ion transport ; GO:0006814
+SSO:000000671 Acetate permease ActP (cation/acetate symporter) > GO:symporter activity ; GO:0015293
+SSO:000000684 Acetoin dehydrogenase E1 component beta-subunit (EC 2.3.1.190) > GO:acetoin catabolic process ; GO:0045150
+SSO:000000684 Acetoin dehydrogenase E1 component beta-subunit (EC 2.3.1.190) > GO:oxidoreductase activity ; GO:0016491
+SSO:000000794 Acyl-CoA thioesterase II (EC 3.1.2.-) > GO:acyl-CoA hydrolase activity ; GO:0047617
+SSO:000000794 Acyl-CoA thioesterase II (EC 3.1.2.-) > GO:acyl-CoA metabolic process ; GO:0006637
+SSO:000000809 Adenine phosphoribosyltransferase (EC 2.4.2.7) > GO:AMP salvage ; GO:0044209
+SSO:000000809 Adenine phosphoribosyltransferase (EC 2.4.2.7) > GO:adenine phosphoribosyltransferase activity ; GO:0003999
+SSO:000000809 Adenine phosphoribosyltransferase (EC 2.4.2.7) > GO:adenine salvage ; GO:0006168
+SSO:000000809 Adenine phosphoribosyltransferase (EC 2.4.2.7) > GO:cytoplasm ; GO:0005737
+SSO:000000831 Adhesin of unknown specificity SdrD > GO:cell adhesion ; GO:0007155
+SSO:000000831 Adhesin of unknown specificity SdrD > GO:cell wall ; GO:0005618
+SSO:000000831 Adhesin of unknown specificity SdrD > GO:extracellular region ; GO:0005576
+SSO:000000831 Adhesin of unknown specificity SdrD > GO:membrane ; GO:0016020
+SSO:000000840 Aerobic respiration control protein arcA > GO:DNA binding ; GO:0003677
+SSO:000000840 Aerobic respiration control protein arcA > GO:cytoplasm ; GO:0005737
+SSO:000000840 Aerobic respiration control protein arcA > GO:phosphorelay signal transduction system ; GO:0000160
+SSO:000000840 Aerobic respiration control protein arcA > GO:regulation of transcription, DNA-templated ; GO:0006355
+SSO:000000840 Aerobic respiration control protein arcA > GO:transcription, DNA-templated ; GO:0006351
+SSO:000000854 Alanyl-tRNA synthetase family protein > GO:ATP binding ; GO:0005524
+SSO:000000854 Alanyl-tRNA synthetase family protein > GO:alanine-tRNA ligase activity ; GO:0004813
+SSO:000000854 Alanyl-tRNA synthetase family protein > GO:alanyl-tRNA aminoacylation ; GO:0006419
+SSO:000000854 Alanyl-tRNA synthetase family protein > GO:cytoplasm ; GO:0005737
+SSO:000000854 Alanyl-tRNA synthetase family protein > GO:metal ion binding ; GO:0046872
+SSO:000000854 Alanyl-tRNA synthetase family protein > GO:nucleic acid binding ; GO:0003676
+SSO:000000872 Alginate O-acetyltransferase AlgJ, inner membrane > GO:alginic acid biosynthetic process ; GO:0042121
+SSO:000000872 Alginate O-acetyltransferase AlgJ, inner membrane > GO:periplasmic space ; GO:0042597
+SSO:000000872 Alginate O-acetyltransferase AlgJ, inner membrane > GO:plasma membrane ; GO:0005886
+SSO:000000872 Alginate O-acetyltransferase AlgJ, inner membrane > GO:transferase activity, transferring acyl groups ; GO:0016746
+SSO:000000884 Alginate regulatory protein AlgQ, positive transcriptional regulator of AlgD > GO:alginic acid biosynthetic process ; GO:0042121
+SSO:000000884 Alginate regulatory protein AlgQ, positive transcriptional regulator of AlgD > GO:negative regulation of proteolysis ; GO:0045861
+SSO:000000884 Alginate regulatory protein AlgQ, positive transcriptional regulator of AlgD > GO:positive regulation of secondary metabolite biosynthetic process ; GO:1900378
+SSO:000000884 Alginate regulatory protein AlgQ, positive transcriptional regulator of AlgD > GO:positive regulation of single-species biofilm formation ; GO:1900192
+SSO:000000884 Alginate regulatory protein AlgQ, positive transcriptional regulator of AlgD > GO:regulation of transcription, DNA-templated ; GO:0006355
+SSO:000000884 Alginate regulatory protein AlgQ, positive transcriptional regulator of AlgD > GO:transcription, DNA-templated ; GO:0006351
+SSO:000000891 Alkyl hydroperoxide reductase protein C (EC 1.11.1.15) > GO:peroxidase activity ; GO:0004601
+SSO:000000891 Alkyl hydroperoxide reductase protein C (EC 1.11.1.15) > GO:peroxiredoxin activity ; GO:0051920
+SSO:000000891 Alkyl hydroperoxide reductase protein C (EC 1.11.1.15) > GO:response to oxidative stress ; GO:0006979
+SSO:000001060 AroM protein > GO:aromatic amino acid family biosynthetic process ; GO:0009073
+SSO:000001138 Bacillolysin, extracellular neutral metalloprotease (EC 3.4.24.28) > GO:extracellular region ; GO:0005576
+SSO:000001138 Bacillolysin, extracellular neutral metalloprotease (EC 3.4.24.28) > GO:metal ion binding ; GO:0046872
+SSO:000001138 Bacillolysin, extracellular neutral metalloprotease (EC 3.4.24.28) > GO:metalloendopeptidase activity ; GO:0004222
+SSO:000001157 Bacterioferritin (EC 1.16.3.1) > GO:cell ; GO:0005623
+SSO:000001157 Bacterioferritin (EC 1.16.3.1) > GO:cellular iron ion homeostasis ; GO:0006879
+SSO:000001157 Bacterioferritin (EC 1.16.3.1) > GO:ferric iron binding ; GO:0008199
+SSO:000001157 Bacterioferritin (EC 1.16.3.1) > GO:ferroxidase activity ; GO:0004322
+SSO:000001157 Bacterioferritin (EC 1.16.3.1) > GO:iron ion transport ; GO:0006826
+SSO:000001385 Candidate 1: dienelactone hydrolase > GO:carboxymethylenebutenolidase activity ; GO:0008806
+SSO:000001438 Carnitine operon protein CaiE > GO:carnitine metabolic process ; GO:0009437
+SSO:000001438 Carnitine operon protein CaiE > GO:transferase activity ; GO:0016740
+SSO:000001480 Cell division transporter, ATP-binding protein FtsE (TC 3.A.5.1.1) > GO:ATP binding ; GO:0005524
+SSO:000001480 Cell division transporter, ATP-binding protein FtsE (TC 3.A.5.1.1) > GO:ATPase activity ; GO:0016887
+SSO:000001480 Cell division transporter, ATP-binding protein FtsE (TC 3.A.5.1.1) > GO:cell cycle ; GO:0007049
+SSO:000001480 Cell division transporter, ATP-binding protein FtsE (TC 3.A.5.1.1) > GO:cell division ; GO:0051301
+SSO:000001480 Cell division transporter, ATP-binding protein FtsE (TC 3.A.5.1.1) > GO:plasma membrane ; GO:0005886
+SSO:000001492 Cell surface protein IsdA, transfers heme from hemoglobin to apo-IsdC > GO:cell wall ; GO:0005618
+SSO:000001492 Cell surface protein IsdA, transfers heme from hemoglobin to apo-IsdC > GO:extracellular region ; GO:0005576
+SSO:000001492 Cell surface protein IsdA, transfers heme from hemoglobin to apo-IsdC > GO:metal ion binding ; GO:0046872
+SSO:000001497 Cell wall-active antibiotics response protein LiaF > GO:integral component of membrane ; GO:0016021
+SSO:000001497 Cell wall-active antibiotics response protein LiaF > GO:plasma membrane ; GO:0005886
+SSO:000001604 CoA-disulfide reductase (EC 1.8.1.14) > GO:CoA-disulfide reductase activity ; GO:0050451
+SSO:000001604 CoA-disulfide reductase (EC 1.8.1.14) > GO:NADP binding ; GO:0050661
+SSO:000001604 CoA-disulfide reductase (EC 1.8.1.14) > GO:cell ; GO:0005623
+SSO:000001604 CoA-disulfide reductase (EC 1.8.1.14) > GO:cell redox homeostasis ; GO:0045454
+SSO:000001604 CoA-disulfide reductase (EC 1.8.1.14) > GO:flavin adenine dinucleotide binding ; GO:0050660
+SSO:000001604 CoA-disulfide reductase (EC 1.8.1.14) > GO:protein disulfide isomerase activity ; GO:0003756
+SSO:000001662 Coenzyme F(420)H(2) dehydrogenase (methanophenazine) subunit FpoO > GO:2 iron, 2 sulfur cluster binding ; GO:0051537
+SSO:000001662 Coenzyme F(420)H(2) dehydrogenase (methanophenazine) subunit FpoO > GO:Methanosarcina-phenazine hydrogenase activity ; GO:0051911
+SSO:000001662 Coenzyme F(420)H(2) dehydrogenase (methanophenazine) subunit FpoO > GO:metal ion binding ; GO:0046872
+SSO:000001662 Coenzyme F(420)H(2) dehydrogenase (methanophenazine) subunit FpoO > GO:methanogenesis ; GO:0015948
+SSO:000001662 Coenzyme F(420)H(2) dehydrogenase (methanophenazine) subunit FpoO > GO:methanol metabolic process ; GO:0015945
+SSO:000001687 Competence protein D > GO:establishment of competence for transformation ; GO:0030420
+SSO:000001821 Cyanobacterial protein slr0575 > GO:integral component of membrane ; GO:0016021
+SSO:000001821 Cyanobacterial protein slr0575 > GO:thylakoid membrane ; GO:0042651
+SSO:000001846 Cyn operon transcriptional activator > GO:DNA binding ; GO:0003677
+SSO:000001846 Cyn operon transcriptional activator > GO:cytoplasm ; GO:0005737
+SSO:000001846 Cyn operon transcriptional activator > GO:transcription factor activity, sequence-specific DNA binding ; GO:0003700
+SSO:000001846 Cyn operon transcriptional activator > GO:transcription, DNA-templated ; GO:0006351
+SSO:000001952 Cytolytic pore-forming protein F component => Gamma-hemolysin HlgB > GO:extracellular region ; GO:0005576
+SSO:000001952 Cytolytic pore-forming protein F component => Gamma-hemolysin HlgB > GO:hemolysis in other organism ; GO:0044179
+SSO:000001952 Cytolytic pore-forming protein F component => Gamma-hemolysin HlgB > GO:pathogenesis ; GO:0009405
+SSO:000001961 Cytoplasmic alpha-amylase (EC 3.2.1.1) > GO:alpha-amylase activity ; GO:0004556
+SSO:000001961 Cytoplasmic alpha-amylase (EC 3.2.1.1) > GO:calcium ion binding ; GO:0005509
+SSO:000001961 Cytoplasmic alpha-amylase (EC 3.2.1.1) > GO:carbohydrate metabolic process ; GO:0005975
+SSO:000001961 Cytoplasmic alpha-amylase (EC 3.2.1.1) > GO:cytoplasm ; GO:0005737
+SSO:000001983 D-Ornithine 4,5-aminomutase S subunit (EC 5.4.3.5) > GO:D-ornithine 4,5-aminomutase activity ; GO:0047831
+SSO:000001983 D-Ornithine 4,5-aminomutase S subunit (EC 5.4.3.5) > GO:cobalamin binding ; GO:0031419
+SSO:000002146 DNA-binding transcriptional dual regulator Rob > GO:sequence-specific DNA binding ; GO:0043565
+SSO:000002146 DNA-binding transcriptional dual regulator Rob > GO:transcription factor activity, sequence-specific DNA binding ; GO:0003700
+SSO:000002149 DNA-damage-inducible protein I > GO:DNA repair ; GO:0006281
+SSO:000002149 DNA-damage-inducible protein I > GO:SOS response ; GO:0009432
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:DNA binding ; GO:0003677
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:DNA-directed RNA polymerase II, core complex ; GO:0005665
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:DNA-directed RNA polymerase activity ; GO:0003899
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:metal ion binding ; GO:0046872
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:nucleoplasm ; GO:0005654
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:termination of RNA polymerase II transcription ; GO:0006369
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:transcription from RNA polymerase II promoter ; GO:0006366
+SSO:000002160 DNA-directed RNA polymerase II 45 kDa polypeptide (EC 2.7.7.6) > GO:transcription, RNA-templated ; GO:0001172
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:DNA binding ; GO:0003677
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:DNA-directed RNA polymerase I complex ; GO:0005736
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:DNA-directed RNA polymerase II, core complex ; GO:0005665
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:DNA-directed RNA polymerase III complex ; GO:0005666
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:RNA polymerase I activity ; GO:0001054
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:nucleoplasm ; GO:0005654
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:ribosome biogenesis ; GO:0042254
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:tRNA transcription from RNA polymerase III promoter ; GO:0042797
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:transcription from RNA polymerase I promoter ; GO:0006360
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:transcription from RNA polymerase II promoter ; GO:0006366
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:transcription from RNA polymerase III promoter ; GO:0006383
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:transcription, RNA-templated ; GO:0001172
+SSO:000002212 DNA-directed RNA polymerases I, II, and III 8.3 kDa polypeptide (EC 2.7.7.6) > GO:zinc ion binding ; GO:0008270
+SSO:000002420 Efflux transport system, outer membrane factor (OMF) lipoprotein > GO:integral component of membrane ; GO:0016021
+SSO:000002420 Efflux transport system, outer membrane factor (OMF) lipoprotein > GO:lipid binding ; GO:0008289
+SSO:000002420 Efflux transport system, outer membrane factor (OMF) lipoprotein > GO:nodulation ; GO:0009877
+SSO:000002420 Efflux transport system, outer membrane factor (OMF) lipoprotein > GO:plasma membrane ; GO:0005886
+SSO:000002420 Efflux transport system, outer membrane factor (OMF) lipoprotein > GO:transporter activity ; GO:0005215
+SSO:000002499 Energy conserving hydrogenase Eha transmembrane protein D > GO:integral component of membrane ; GO:0016021
+SSO:000002499 Energy conserving hydrogenase Eha transmembrane protein D > GO:plasma membrane ; GO:0005886
+SSO:000002514 Energy conserving hydrogenase Ehb integral membrane protein O > GO:integral component of membrane ; GO:0016021
+SSO:000002514 Energy conserving hydrogenase Ehb integral membrane protein O > GO:oxidation-reduction process ; GO:0055114
+SSO:000002514 Energy conserving hydrogenase Ehb integral membrane protein O > GO:plasma membrane ; GO:0005886
+SSO:000002925 Frataxin homolog CyaY, facilitates Fe-S cluster assembly, interacts with IscS > GO:ferric iron binding ; GO:0008199
+SSO:000002925 Frataxin homolog CyaY, facilitates Fe-S cluster assembly, interacts with IscS > GO:iron-sulfur cluster assembly ; GO:0016226
+SSO:000002928 FrmR: Negative transcriptional regulator of formaldehyde detoxification operon > GO:DNA binding ; GO:0003677
+SSO:000002928 FrmR: Negative transcriptional regulator of formaldehyde detoxification operon > GO:cytoplasm ; GO:0005737
+SSO:000002928 FrmR: Negative transcriptional regulator of formaldehyde detoxification operon > GO:metal ion binding ; GO:0046872
+SSO:000002928 FrmR: Negative transcriptional regulator of formaldehyde detoxification operon > GO:negative regulation of transcription, DNA-templated ; GO:0045892
+SSO:000002928 FrmR: Negative transcriptional regulator of formaldehyde detoxification operon > GO:transcription, DNA-templated ; GO:0006351
+SSO:000002940 Fructuronate transporter GntP > GO:D-gluconate catabolic process ; GO:0046177
+SSO:000002940 Fructuronate transporter GntP > GO:gluconate transmembrane transporter activity ; GO:0015128
+SSO:000002940 Fructuronate transporter GntP > GO:integral component of membrane ; GO:0016021
+SSO:000002940 Fructuronate transporter GntP > GO:plasma membrane ; GO:0005886
+SSO:000003033 Gamma-glutamyl-aminobutyraldehyde dehydrogenase (EC 1.2.1.-) > GO:aldehyde dehydrogenase (NAD) activity ; GO:0004029
+SSO:000003033 Gamma-glutamyl-aminobutyraldehyde dehydrogenase (EC 1.2.1.-) > GO:aldehyde dehydrogenase [NAD(P)+] activity ; GO:0004030
+SSO:000003033 Gamma-glutamyl-aminobutyraldehyde dehydrogenase (EC 1.2.1.-) > GO:putrescine catabolic process ; GO:0009447
+SSO:000003301 Glycolipoprotein LprI, lysozyme inhibitor > GO:plasma membrane ; GO:0005886
+SSO:000003308 Glycyl-tRNA synthetase (EC 6.1.1.14) > GO:ATP binding ; GO:0005524
+SSO:000003308 Glycyl-tRNA synthetase (EC 6.1.1.14) > GO:cytoplasm ; GO:0005737
+SSO:000003308 Glycyl-tRNA synthetase (EC 6.1.1.14) > GO:glycine-tRNA ligase activity ; GO:0004820
+SSO:000003308 Glycyl-tRNA synthetase (EC 6.1.1.14) > GO:glycyl-tRNA aminoacylation ; GO:0006426
+SSO:000003308 Glycyl-tRNA synthetase (EC 6.1.1.14) > GO:protein dimerization activity ; GO:0046983
+SSO:000003367 Heme ABC type transporter HtsABC, permease protein HtsB > GO:integral component of membrane ; GO:0016021
+SSO:000003367 Heme ABC type transporter HtsABC, permease protein HtsB > GO:ion transport ; GO:0006811
+SSO:000003367 Heme ABC type transporter HtsABC, permease protein HtsB > GO:iron ion homeostasis ; GO:0055072
+SSO:000003367 Heme ABC type transporter HtsABC, permease protein HtsB > GO:plasma membrane ; GO:0005886
+SSO:000003367 Heme ABC type transporter HtsABC, permease protein HtsB > GO:transporter activity ; GO:0005215
+SSO:000003386 Heme transporter IsdDEF, lipoprotein IsdE > GO:heme binding ; GO:0020037
+SSO:000003386 Heme transporter IsdDEF, lipoprotein IsdE > GO:heme transport ; GO:0015886
+SSO:000003386 Heme transporter IsdDEF, lipoprotein IsdE > GO:metal ion binding ; GO:0046872
+SSO:000003386 Heme transporter IsdDEF, lipoprotein IsdE > GO:plasma membrane ; GO:0005886
+SSO:000003435 High-affinity choline uptake protein BetT > GO:glycine betaine biosynthetic process from choline ; GO:0019285
+SSO:000003435 High-affinity choline uptake protein BetT > GO:integral component of membrane ; GO:0016021
+SSO:000003435 High-affinity choline uptake protein BetT > GO:plasma membrane ; GO:0005886
+SSO:000003435 High-affinity choline uptake protein BetT > GO:transporter activity ; GO:0005215
+SSO:000003483 Homoserine O-acetyltransferase (EC 2.3.1.31) > GO:cytoplasm ; GO:0005737
+SSO:000003483 Homoserine O-acetyltransferase (EC 2.3.1.31) > GO:homoserine O-acetyltransferase activity ; GO:0004414
+SSO:000003483 Homoserine O-acetyltransferase (EC 2.3.1.31) > GO:methionine biosynthetic process ; GO:0009086
+SSO:000003493 Hyaluronan synthase (EC 2.4.1.212) > GO:hyaluronan biosynthetic process ; GO:0030213
+SSO:000003493 Hyaluronan synthase (EC 2.4.1.212) > GO:hyaluronan synthase activity ; GO:0050501
+SSO:000003493 Hyaluronan synthase (EC 2.4.1.212) > GO:integral component of membrane ; GO:0016021
+SSO:000003493 Hyaluronan synthase (EC 2.4.1.212) > GO:pathogenesis ; GO:0009405
+SSO:000003493 Hyaluronan synthase (EC 2.4.1.212) > GO:plasma membrane ; GO:0005886
+SSO:000003596 Hypothetical protein YaeJ with similarity to translation release factor > GO:aminoacyl-tRNA hydrolase activity ; GO:0004045
+SSO:000003596 Hypothetical protein YaeJ with similarity to translation release factor > GO:cytoplasm ; GO:0005737
+SSO:000003596 Hypothetical protein YaeJ with similarity to translation release factor > GO:rescue of stalled ribosome ; GO:0072344
+SSO:000003596 Hypothetical protein YaeJ with similarity to translation release factor > GO:ribosome binding ; GO:0043022
+SSO:000003596 Hypothetical protein YaeJ with similarity to translation release factor > GO:translation release factor activity, codon nonspecific ; GO:0016150
+SSO:000003934 Integral membrane protein EccD5, component of Type VII secretion system ESX-5 > GO:integral component of membrane ; GO:0016021
+SSO:000003934 Integral membrane protein EccD5, component of Type VII secretion system ESX-5 > GO:plasma membrane ; GO:0005886
+SSO:000003934 Integral membrane protein EccD5, component of Type VII secretion system ESX-5 > GO:transport ; GO:0006810
+SSO:000003965 Internalin-like protein (LPXTG motif) Lmo0333 homolog > GO:cell wall ; GO:0005618
+SSO:000003965 Internalin-like protein (LPXTG motif) Lmo0333 homolog > GO:extracellular region ; GO:0005576
+SSO:000004008 Iron(III) dicitrate transport system permease protein FecC (TC 3.A.1.14.1) > GO:integral component of membrane ; GO:0016021
+SSO:000004008 Iron(III) dicitrate transport system permease protein FecC (TC 3.A.1.14.1) > GO:ion transport ; GO:0006811
+SSO:000004008 Iron(III) dicitrate transport system permease protein FecC (TC 3.A.1.14.1) > GO:iron ion homeostasis ; GO:0055072
+SSO:000004008 Iron(III) dicitrate transport system permease protein FecC (TC 3.A.1.14.1) > GO:plasma membrane ; GO:0005886
+SSO:000004008 Iron(III) dicitrate transport system permease protein FecC (TC 3.A.1.14.1) > GO:transporter activity ; GO:0005215
+SSO:000004145 L-fucose mutarotase (EC 5.1.3.29) > GO:L-fucose metabolic process ; GO:0042354
+SSO:000004145 L-fucose mutarotase (EC 5.1.3.29) > GO:cytoplasm ; GO:0005737
+SSO:000004145 L-fucose mutarotase (EC 5.1.3.29) > GO:fucose binding ; GO:0042806
+SSO:000004145 L-fucose mutarotase (EC 5.1.3.29) > GO:racemase and epimerase activity ; GO:0016854
+SSO:000004149 L-fuculose phosphate aldolase (EC 4.1.2.17) > GO:D-arabinose catabolic process ; GO:0019571
+SSO:000004149 L-fuculose phosphate aldolase (EC 4.1.2.17) > GO:L-fucose catabolic process ; GO:0042355
+SSO:000004149 L-fuculose phosphate aldolase (EC 4.1.2.17) > GO:L-fuculose-phosphate aldolase activity ; GO:0008738
+SSO:000004149 L-fuculose phosphate aldolase (EC 4.1.2.17) > GO:aldehyde-lyase activity ; GO:0016832
+SSO:000004149 L-fuculose phosphate aldolase (EC 4.1.2.17) > GO:cytosol ; GO:0005829
+SSO:000004149 L-fuculose phosphate aldolase (EC 4.1.2.17) > GO:zinc ion binding ; GO:0008270
+SSO:000004176 L-seryl-tRNA(Sec) kinase > GO:ATP binding ; GO:0005524
+SSO:000004176 L-seryl-tRNA(Sec) kinase > GO:kinase activity ; GO:0016301
+SSO:000004176 L-seryl-tRNA(Sec) kinase > GO:phosphotransferase activity, alcohol group as acceptor ; GO:0016773
+SSO:000004176 L-seryl-tRNA(Sec) kinase > GO:selenocysteinyl-tRNA(Sec) biosynthetic process ; GO:0097056
+SSO:000004183 L-threonine transporter, anaerobically inducible > GO:integral component of membrane ; GO:0016021
+SSO:000004183 L-threonine transporter, anaerobically inducible > GO:plasma membrane ; GO:0005886
+SSO:000004183 L-threonine transporter, anaerobically inducible > GO:serine transmembrane transporter activity ; GO:0022889
+SSO:000004183 L-threonine transporter, anaerobically inducible > GO:symporter activity ; GO:0015293
+SSO:000004183 L-threonine transporter, anaerobically inducible > GO:threonine efflux transmembrane transporter activity ; GO:0015565
+SSO:000004224 LSU ribosomal protein L17p > GO:ribosome ; GO:0005840
+SSO:000004224 LSU ribosomal protein L17p > GO:structural constituent of ribosome ; GO:0003735
+SSO:000004224 LSU ribosomal protein L17p > GO:translation ; GO:0006412
+SSO:000004323 LSU ribosomal protein L3p (L3e) > GO:rRNA binding ; GO:0019843
+SSO:000004323 LSU ribosomal protein L3p (L3e) > GO:ribosome ; GO:0005840
+SSO:000004323 LSU ribosomal protein L3p (L3e) > GO:structural constituent of ribosome ; GO:0003735
+SSO:000004323 LSU ribosomal protein L3p (L3e) > GO:translation ; GO:0006412
+SSO:000004389 Lactoylbacillithiol lyase > GO:lactoylglutathione lyase activity ; GO:0004462
+SSO:000004389 Lactoylbacillithiol lyase > GO:metal ion binding ; GO:0046872
+SSO:000004479 Lipopolysaccharide core biosynthesis protein RfaZ > GO:lipopolysaccharide core region biosynthetic process ; GO:0009244
+SSO:000004698 Malto-oligosyltrehalose synthase (EC 5.4.99.15) > GO:(1,4)-alpha-D-glucan 1-alpha-D-glucosylmutase activity ; GO:0047470
+SSO:000004698 Malto-oligosyltrehalose synthase (EC 5.4.99.15) > GO:carbohydrate metabolic process ; GO:0005975
+SSO:000004708 Manganese-dependent protein-tyrosine phosphatase (EC 3.1.3.48) > GO:manganese ion binding ; GO:0030145
+SSO:000004708 Manganese-dependent protein-tyrosine phosphatase (EC 3.1.3.48) > GO:protein tyrosine phosphatase activity ; GO:0004725
+SSO:000004754 Membrane protein EccB1, component of Type VII secretion system ESX-1 > GO:integral component of membrane ; GO:0016021
+SSO:000004754 Membrane protein EccB1, component of Type VII secretion system ESX-1 > GO:plasma membrane ; GO:0005886
+SSO:000004754 Membrane protein EccB1, component of Type VII secretion system ESX-1 > GO:transport ; GO:0006810
+SSO:000004829 Methicillin resistance regulatory sensor-transducer MecR1 > GO:penicillin binding ; GO:0008658
+SSO:000004829 Methicillin resistance regulatory sensor-transducer MecR1 > GO:response to antibiotic ; GO:0046677
+SSO:000004883 Methylisocitrate lyase (EC 4.1.3.30) > GO:cytoplasm ; GO:0005737
+SSO:000004883 Methylisocitrate lyase (EC 4.1.3.30) > GO:glyoxylate cycle ; GO:0006097
+SSO:000004883 Methylisocitrate lyase (EC 4.1.3.30) > GO:magnesium ion binding ; GO:0000287
+SSO:000004883 Methylisocitrate lyase (EC 4.1.3.30) > GO:methylisocitrate lyase activity ; GO:0046421
+SSO:000004883 Methylisocitrate lyase (EC 4.1.3.30) > GO:propionate catabolic process, 2-methylcitrate cycle ; GO:0019629
+SSO:000004883 Methylisocitrate lyase (EC 4.1.3.30) > GO:transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer ; GO:0046912
+SSO:000004911 Mg(2+) transport ATPase, P-type (EC 3.6.3.2) > GO:ATP binding ; GO:0005524
+SSO:000004911 Mg(2+) transport ATPase, P-type (EC 3.6.3.2) > GO:integral component of membrane ; GO:0016021
+SSO:000004911 Mg(2+) transport ATPase, P-type (EC 3.6.3.2) > GO:magnesium ion transport ; GO:0015693
+SSO:000004911 Mg(2+) transport ATPase, P-type (EC 3.6.3.2) > GO:magnesium-importing ATPase activity ; GO:0015444
+SSO:000004911 Mg(2+) transport ATPase, P-type (EC 3.6.3.2) > GO:metal ion binding ; GO:0046872
+SSO:000004911 Mg(2+) transport ATPase, P-type (EC 3.6.3.2) > GO:plasma membrane ; GO:0005886
+SSO:000004914 Mg-protoporphyrin O-methyltransferase (EC 2.1.1.11) > GO:bacteriochlorophyll biosynthetic process ; GO:0030494
+SSO:000004914 Mg-protoporphyrin O-methyltransferase (EC 2.1.1.11) > GO:light-independent bacteriochlorophyll biosynthetic process ; GO:0036070
+SSO:000004914 Mg-protoporphyrin O-methyltransferase (EC 2.1.1.11) > GO:magnesium protoporphyrin IX methyltransferase activity ; GO:0046406
+SSO:000004914 Mg-protoporphyrin O-methyltransferase (EC 2.1.1.11) > GO:photosynthesis ; GO:0015979
+SSO:000004975 Multidrug efflux system EmrAB-OMF, membrane fusion component EmrA > GO:drug transmembrane transporter activity ; GO:0015238
+SSO:000004975 Multidrug efflux system EmrAB-OMF, membrane fusion component EmrA > GO:integral component of membrane ; GO:0016021
+SSO:000004975 Multidrug efflux system EmrAB-OMF, membrane fusion component EmrA > GO:intrinsic component of periplasmic side of plasma membrane ; GO:0031237
+SSO:000004975 Multidrug efflux system EmrAB-OMF, membrane fusion component EmrA > GO:intrinsic component of plasma membrane ; GO:0031226
+SSO:000004975 Multidrug efflux system EmrAB-OMF, membrane fusion component EmrA > GO:response to antibiotic ; GO:0046677
+SSO:000005029 Multiple antibiotic resistance protein MarA > GO:core promoter proximal region sequence-specific DNA binding ; GO:0000987
+SSO:000005029 Multiple antibiotic resistance protein MarA > GO:cytosol ; GO:0005829
+SSO:000005029 Multiple antibiotic resistance protein MarA > GO:regulation of transcription, DNA-templated ; GO:0006355
+SSO:000005029 Multiple antibiotic resistance protein MarA > GO:response to antibiotic ; GO:0046677
+SSO:000005029 Multiple antibiotic resistance protein MarA > GO:transcription factor activity, sequence-specific DNA binding ; GO:0003700
+SSO:000005029 Multiple antibiotic resistance protein MarA > GO:transcription, DNA-templated ; GO:0006351
+SSO:000005099 N-acetyl-lysine deacetylase (EC 3.5.1.-) > GO:cobalt ion binding ; GO:0050897
+SSO:000005099 N-acetyl-lysine deacetylase (EC 3.5.1.-) > GO:cytoplasm ; GO:0005737
+SSO:000005099 N-acetyl-lysine deacetylase (EC 3.5.1.-) > GO:hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides ; GO:0016811
+SSO:000005099 N-acetyl-lysine deacetylase (EC 3.5.1.-) > GO:lysine biosynthetic process via aminoadipic acid ; GO:0019878
+SSO:000005099 N-acetyl-lysine deacetylase (EC 3.5.1.-) > GO:metallopeptidase activity ; GO:0008237
+SSO:000005099 N-acetyl-lysine deacetylase (EC 3.5.1.-) > GO:zinc ion binding ; GO:0008270
+SSO:000005151 N5-methyltetrahydromethanopterin:coenzyme M methyltransferase subunit C (EC 2.1.1.86) > GO:integral component of membrane ; GO:0016021
+SSO:000005151 N5-methyltetrahydromethanopterin:coenzyme M methyltransferase subunit C (EC 2.1.1.86) > GO:methanogenesis, from carbon dioxide ; GO:0019386
+SSO:000005151 N5-methyltetrahydromethanopterin:coenzyme M methyltransferase subunit C (EC 2.1.1.86) > GO:one-carbon metabolic process ; GO:0006730
+SSO:000005151 N5-methyltetrahydromethanopterin:coenzyme M methyltransferase subunit C (EC 2.1.1.86) > GO:plasma membrane ; GO:0005886
+SSO:000005151 N5-methyltetrahydromethanopterin:coenzyme M methyltransferase subunit C (EC 2.1.1.86) > GO:tetrahydromethanopterin S-methyltransferase activity ; GO:0030269
+SSO:000005831 Periplasmic alpha-amylase (EC 3.2.1.1) > GO:alpha-amylase activity ; GO:0004556
+SSO:000005831 Periplasmic alpha-amylase (EC 3.2.1.1) > GO:alpha-glucan catabolic process ; GO:0030980
+SSO:000005831 Periplasmic alpha-amylase (EC 3.2.1.1) > GO:calcium ion binding ; GO:0005509
+SSO:000005831 Periplasmic alpha-amylase (EC 3.2.1.1) > GO:cellular oligosaccharide catabolic process ; GO:0051692
+SSO:000005831 Periplasmic alpha-amylase (EC 3.2.1.1) > GO:outer membrane-bounded periplasmic space ; GO:0030288
+SSO:000005831 Periplasmic alpha-amylase (EC 3.2.1.1) > GO:periplasmic space ; GO:0042597
+SSO:000005862 Pertussis toxin subunit 4 precursor (PTX S4) > GO:extracellular region ; GO:0005576
+SSO:000005862 Pertussis toxin subunit 4 precursor (PTX S4) > GO:host cell plasma membrane ; GO:0020002
+SSO:000005862 Pertussis toxin subunit 4 precursor (PTX S4) > GO:membrane ; GO:0016020
+SSO:000005862 Pertussis toxin subunit 4 precursor (PTX S4) > GO:pathogenesis ; GO:0009405
+SSO:000005968 Phosphogluconate dehydratase (EC 4.2.1.12) > GO:Entner-Doudoroff pathway through 6-phosphogluconate ; GO:0009255
+SSO:000005968 Phosphogluconate dehydratase (EC 4.2.1.12) > GO:phosphogluconate dehydratase activity ; GO:0004456
+SSO:000006063 Photosystem I iron-sulfur center (EC 1.97.1.12) > GO:4 iron, 4 sulfur cluster binding ; GO:0051539
+SSO:000006063 Photosystem I iron-sulfur center (EC 1.97.1.12) > GO:electron carrier activity ; GO:0009055
+SSO:000006063 Photosystem I iron-sulfur center (EC 1.97.1.12) > GO:metal ion binding ; GO:0046872
+SSO:000006063 Photosystem I iron-sulfur center (EC 1.97.1.12) > GO:oxidoreductase activity ; GO:0016491
+SSO:000006063 Photosystem I iron-sulfur center (EC 1.97.1.12) > GO:photosynthetic electron transport in photosystem I ; GO:0009773
+SSO:000006063 Photosystem I iron-sulfur center (EC 1.97.1.12) > GO:photosystem I ; GO:0009522
+SSO:000006063 Photosystem I iron-sulfur center (EC 1.97.1.12) > GO:thylakoid membrane ; GO:0042651
+SSO:000006112 Pimeloyl-CoA synthase (EC 6.2.1.14) > GO:6-carboxyhexanoate-CoA ligase activity ; GO:0042410
+SSO:000006112 Pimeloyl-CoA synthase (EC 6.2.1.14) > GO:ATP binding ; GO:0005524
+SSO:000006112 Pimeloyl-CoA synthase (EC 6.2.1.14) > GO:biotin biosynthetic process ; GO:0009102
+SSO:000006112 Pimeloyl-CoA synthase (EC 6.2.1.14) > GO:magnesium ion binding ; GO:0000287
+SSO:000006201 PqsE, quinolone signal response protein > GO:secondary metabolite biosynthetic process ; GO:0044550
+SSO:000006305 Prephenate dehydrogenase (EC 1.3.1.12) > GO:amino acid binding ; GO:0016597
+SSO:000006305 Prephenate dehydrogenase (EC 1.3.1.12) > GO:prephenate dehydrogenase (NADP+) activity ; GO:0004665
+SSO:000006305 Prephenate dehydrogenase (EC 1.3.1.12) > GO:prephenate dehydrogenase activity ; GO:0008977
+SSO:000006305 Prephenate dehydrogenase (EC 1.3.1.12) > GO:tyrosine biosynthetic process ; GO:0006571
+SSO:000006414 Protease production regulatory protein Hpr (ScoC) > GO:DNA binding ; GO:0003677
+SSO:000006414 Protease production regulatory protein Hpr (ScoC) > GO:negative regulation of transcription, DNA-templated ; GO:0045892
+SSO:000006414 Protease production regulatory protein Hpr (ScoC) > GO:sporulation resulting in formation of a cellular spore ; GO:0030435
+SSO:000006414 Protease production regulatory protein Hpr (ScoC) > GO:transcription factor activity, sequence-specific DNA binding ; GO:0003700
+SSO:000006414 Protease production regulatory protein Hpr (ScoC) > GO:transcription, DNA-templated ; GO:0006351
+SSO:000006436 Protein GerPC, required for proper assembly of spore coat, mutations lead to super-dormant spore > GO:sporulation resulting in formation of a cellular spore ; GO:0030435
+SSO:000006444 Protein PE35, involved in regulation of esxAB expression in Type VII secretion system ESX-1 > GO:extracellular region ; GO:0005576
+SSO:000006732 Putative phosphoribosylaminoimidazole-succinocarboxamide synthase 2 (SAICAR synthetase 2) > GO:'de novo' IMP biosynthetic process ; GO:0006189
+SSO:000006732 Putative phosphoribosylaminoimidazole-succinocarboxamide synthase 2 (SAICAR synthetase 2) > GO:ATP binding ; GO:0005524
+SSO:000006732 Putative phosphoribosylaminoimidazole-succinocarboxamide synthase 2 (SAICAR synthetase 2) > GO:phosphoribosylaminoimidazolesuccinocarboxamide synthase activity ; GO:0004639
+SSO:000006741 Putative response regulator ArlR > GO:DNA binding ; GO:0003677
+SSO:000006741 Putative response regulator ArlR > GO:cytoplasm ; GO:0005737
+SSO:000006741 Putative response regulator ArlR > GO:pathogenesis ; GO:0009405
+SSO:000006741 Putative response regulator ArlR > GO:phosphorelay signal transduction system ; GO:0000160
+SSO:000006741 Putative response regulator ArlR > GO:regulation of transcription, DNA-templated ; GO:0006355
+SSO:000006741 Putative response regulator ArlR > GO:transcription, DNA-templated ; GO:0006351
+SSO:000006805 Pyridoxal 5'-phosphate synthase (glutamine hydrolyzing), glutaminase subunit (EC 4.3.3.6) > GO:glutaminase activity ; GO:0004359
+SSO:000006805 Pyridoxal 5'-phosphate synthase (glutamine hydrolyzing), glutaminase subunit (EC 4.3.3.6) > GO:glutamine catabolic process ; GO:0006543
+SSO:000006805 Pyridoxal 5'-phosphate synthase (glutamine hydrolyzing), glutaminase subunit (EC 4.3.3.6) > GO:pyridoxal 5'-phosphate synthase (glutamine hydrolysing) activity ; GO:0036381
+SSO:000006805 Pyridoxal 5'-phosphate synthase (glutamine hydrolyzing), glutaminase subunit (EC 4.3.3.6) > GO:pyridoxal phosphate biosynthetic process ; GO:0042823
+SSO:000006805 Pyridoxal 5'-phosphate synthase (glutamine hydrolyzing), glutaminase subunit (EC 4.3.3.6) > GO:vitamin B6 biosynthetic process ; GO:0042819
+SSO:000006918 RNA polymerase sporulation specific sigma factor SigF > GO:DNA binding ; GO:0003677
+SSO:000006918 RNA polymerase sporulation specific sigma factor SigF > GO:DNA-templated transcription, initiation ; GO:0006352
+SSO:000006918 RNA polymerase sporulation specific sigma factor SigF > GO:sigma factor activity ; GO:0016987
+SSO:000006918 RNA polymerase sporulation specific sigma factor SigF > GO:sporulation resulting in formation of a cellular spore ; GO:0030435
+SSO:000006918 RNA polymerase sporulation specific sigma factor SigF > GO:transcription factor activity, sequence-specific DNA binding ; GO:0003700
+SSO:000007067 Riboflavin transporter RibN > GO:integral component of membrane ; GO:0016021
+SSO:000007067 Riboflavin transporter RibN > GO:plasma membrane ; GO:0005886
+SSO:000007067 Riboflavin transporter RibN > GO:transport ; GO:0006810
+SSO:000007177 Rod shape-determining protein MreB > GO:FtsZ-dependent cytokinesis ; GO:0043093
+SSO:000007177 Rod shape-determining protein MreB > GO:cell morphogenesis ; GO:0000902
+SSO:000007177 Rod shape-determining protein MreB > GO:cytoskeleton ; GO:0005856
+SSO:000007177 Rod shape-determining protein MreB > GO:identical protein binding ; GO:0042802
+SSO:000007177 Rod shape-determining protein MreB > GO:intrinsic component of plasma membrane ; GO:0031226
+SSO:000007177 Rod shape-determining protein MreB > GO:negative regulation of cell division ; GO:0051782
+SSO:000007177 Rod shape-determining protein MreB > GO:plasma membrane ; GO:0005886
+SSO:000007177 Rod shape-determining protein MreB > GO:regulation of cell shape ; GO:0008360
+SSO:000007177 Rod shape-determining protein MreB > GO:regulation of chromosome segregation ; GO:0051983
+SSO:000007301 SSU ribosomal protein S27e > GO:ribosome ; GO:0005840
+SSO:000007301 SSU ribosomal protein S27e > GO:structural constituent of ribosome ; GO:0003735
+SSO:000007301 SSU ribosomal protein S27e > GO:translation ; GO:0006412
+SSO:000007301 SSU ribosomal protein S27e > GO:zinc ion binding ; GO:0008270
+SSO:000007408 Sensor protein BasS (activates BasR) > GO:ATP binding ; GO:0005524
+SSO:000007408 Sensor protein BasS (activates BasR) > GO:integral component of membrane ; GO:0016021
+SSO:000007408 Sensor protein BasS (activates BasR) > GO:intracellular ; GO:0005622
+SSO:000007408 Sensor protein BasS (activates BasR) > GO:pathogenesis ; GO:0009405
+SSO:000007408 Sensor protein BasS (activates BasR) > GO:phosphorelay sensor kinase activity ; GO:0000155
+SSO:000007408 Sensor protein BasS (activates BasR) > GO:plasma membrane ; GO:0005886
+SSO:000007460 Shikimate 5-dehydrogenase I gamma (EC 1.1.1.25) > GO:shikimate 3-dehydrogenase (NADP+) activity ; GO:0004764
+SSO:000007691 Stage II sporulation protein D (SpoIID) > GO:sporulation resulting in formation of a cellular spore ; GO:0030435
+SSO:000007723 Stage V sporulation protein required for normal spore cortex and coat synthesis (SpoVM) > GO:sporulation resulting in formation of a cellular spore ; GO:0030435
+SSO:000007727 Staphylococcal accessory regulator A (SarA) > GO:DNA binding ; GO:0003677
+SSO:000007727 Staphylococcal accessory regulator A (SarA) > GO:cytoplasm ; GO:0005737
+SSO:000007727 Staphylococcal accessory regulator A (SarA) > GO:metal ion binding ; GO:0046872
+SSO:000007727 Staphylococcal accessory regulator A (SarA) > GO:pathogenesis ; GO:0009405
+SSO:000007727 Staphylococcal accessory regulator A (SarA) > GO:regulation of transcription, DNA-templated ; GO:0006355
+SSO:000007727 Staphylococcal accessory regulator A (SarA) > GO:transcription, DNA-templated ; GO:0006351
+SSO:000007794 Succinyl-CoA:(S)-malate CoA transferase subunit B (EC 2.8.3.22) > GO:CoA-transferase activity ; GO:0008410
+SSO:000007794 Succinyl-CoA:(S)-malate CoA transferase subunit B (EC 2.8.3.22) > GO:carbon fixation by 3-hydroxypropionate cycle ; GO:0043427
+SSO:000007974 Tetrapartite efflux system component, FusD-like => FusD of FusABCDE system > GO:integral component of membrane ; GO:0016021
+SSO:000007974 Tetrapartite efflux system component, FusD-like => FusD of FusABCDE system > GO:plasma membrane ; GO:0005886
+SSO:000007985 Tetrathionate reductase subunit C > GO:integral component of membrane ; GO:0016021
+SSO:000007985 Tetrathionate reductase subunit C > GO:plasma membrane ; GO:0005886
+SSO:000008118 Toxin co-regulated pilus biosynthesis protein E, anchors TcpT to membrane > GO:integral component of membrane ; GO:0016021
+SSO:000008118 Toxin co-regulated pilus biosynthesis protein E, anchors TcpT to membrane > GO:plasma membrane ; GO:0005886
+SSO:000008118 Toxin co-regulated pilus biosynthesis protein E, anchors TcpT to membrane > GO:protein secretion ; GO:0009306
+SSO:000008148 Transcription elongator complex protein 6 > GO:Elongator holoenzyme complex ; GO:0033588
+SSO:000008148 Transcription elongator complex protein 6 > GO:cytoplasm ; GO:0005737
+SSO:000008148 Transcription elongator complex protein 6 > GO:nucleoplasm ; GO:0005654
+SSO:000008148 Transcription elongator complex protein 6 > GO:protein urmylation ; GO:0032447
+SSO:000008148 Transcription elongator complex protein 6 > GO:regulation of transcription from RNA polymerase II promoter ; GO:0006357
+SSO:000008148 Transcription elongator complex protein 6 > GO:tRNA wobble uridine modification ; GO:0002098
+SSO:000008148 Transcription elongator complex protein 6 > GO:transcription, DNA-templated ; GO:0006351
+SSO:000008215 Transcriptional regulator SarR (Staphylococcal accessory regulator R) > GO:DNA binding ; GO:0003677
+SSO:000008215 Transcriptional regulator SarR (Staphylococcal accessory regulator R) > GO:cytoplasm ; GO:0005737
+SSO:000008215 Transcriptional regulator SarR (Staphylococcal accessory regulator R) > GO:pathogenesis ; GO:0009405
+SSO:000008215 Transcriptional regulator SarR (Staphylococcal accessory regulator R) > GO:regulation of transcription, DNA-templated ; GO:0006355
+SSO:000008215 Transcriptional regulator SarR (Staphylococcal accessory regulator R) > GO:transcription, DNA-templated ; GO:0006351
+SSO:000008218 Transcriptional regulator SarV (Staphylococcal accessory regulator V) > GO:DNA binding ; GO:0003677
+SSO:000008218 Transcriptional regulator SarV (Staphylococcal accessory regulator V) > GO:cytoplasm ; GO:0005737
+SSO:000008218 Transcriptional regulator SarV (Staphylococcal accessory regulator V) > GO:pathogenesis ; GO:0009405
+SSO:000008218 Transcriptional regulator SarV (Staphylococcal accessory regulator V) > GO:transcription factor activity, sequence-specific DNA binding ; GO:0003700
+SSO:000008218 Transcriptional regulator SarV (Staphylococcal accessory regulator V) > GO:transcription, DNA-templated ; GO:0006351
+SSO:000008238 Transcriptional regulator of alpha-acetolactate operon alsR > GO:DNA binding ; GO:0003677
+SSO:000008238 Transcriptional regulator of alpha-acetolactate operon alsR > GO:acetoin biosynthetic process ; GO:0045151
+SSO:000008238 Transcriptional regulator of alpha-acetolactate operon alsR > GO:transcription factor activity, sequence-specific DNA binding ; GO:0003700
+SSO:000008238 Transcriptional regulator of alpha-acetolactate operon alsR > GO:transcription, DNA-templated ; GO:0006351
+SSO:000008331 Transmembrane transport protein MmpL1 > GO:integral component of membrane ; GO:0016021
+SSO:000008331 Transmembrane transport protein MmpL1 > GO:plasma membrane ; GO:0005886
+SSO:000008331 Transmembrane transport protein MmpL1 > GO:transport ; GO:0006810
+SSO:000008381 Trimethylamine-N-oxide reductase associated c-type cytochrome, TorY > GO:Gram-negative-bacterium-type cell wall ; GO:0009276
+SSO:000008381 Trimethylamine-N-oxide reductase associated c-type cytochrome, TorY > GO:electron carrier activity ; GO:0009055
+SSO:000008381 Trimethylamine-N-oxide reductase associated c-type cytochrome, TorY > GO:heme binding ; GO:0020037
+SSO:000008381 Trimethylamine-N-oxide reductase associated c-type cytochrome, TorY > GO:integral component of membrane ; GO:0016021
+SSO:000008381 Trimethylamine-N-oxide reductase associated c-type cytochrome, TorY > GO:iron ion binding ; GO:0005506
+SSO:000008381 Trimethylamine-N-oxide reductase associated c-type cytochrome, TorY > GO:oxidation-reduction process ; GO:0055114
+SSO:000008381 Trimethylamine-N-oxide reductase associated c-type cytochrome, TorY > GO:plasma membrane ; GO:0005886
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:DNA binding ; GO:0003677
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:cytoplasm ; GO:0005737
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:phosphorelay response regulator activity ; GO:0000156
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:phosphorelay signal transduction system ; GO:0000160
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:regulation of transcription, DNA-templated ; GO:0006355
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:response to antibiotic ; GO:0046677
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:response to iron(III) ion ; GO:0010041
+SSO:000008465 Two-component transcriptional regulatory protein BasR (activated by BasS) > GO:transcription, DNA-templated ; GO:0006351
+SSO:000008531 Type III secretion protein (YscA) > GO:pathogenesis ; GO:0009405
+SSO:000008571 Type IV pilus biogenesis protein PilO > GO:carbon utilization ; GO:0015976
+SSO:000008571 Type IV pilus biogenesis protein PilO > GO:integral component of membrane ; GO:0016021
+SSO:000008571 Type IV pilus biogenesis protein PilO > GO:plasma membrane ; GO:0005886
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:NADH binding ; GO:0070404
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:O antigen biosynthetic process ; GO:0009243
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:cell wall organization ; GO:0071555
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:lipopolysaccharide biosynthetic process ; GO:0009103
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:oxidation-reduction process ; GO:0055114
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:oxidoreductase activity ; GO:0016491
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:polysaccharide biosynthetic process ; GO:0000271
+SSO:000008601 UDP-2-acetamido-2-deoxy-D-glucuronic acid dehydrogenase (NAD+) (EC 1.1.1.335) > GO:protein tetramerization ; GO:0051262
+SSO:000008686 Ubiquinone biosynthesis regulatory protein kinase UbiB > GO:ATP binding ; GO:0005524
+SSO:000008686 Ubiquinone biosynthesis regulatory protein kinase UbiB > GO:integral component of membrane ; GO:0016021
+SSO:000008686 Ubiquinone biosynthesis regulatory protein kinase UbiB > GO:plasma membrane ; GO:0005886
+SSO:000008686 Ubiquinone biosynthesis regulatory protein kinase UbiB > GO:protein kinase activity ; GO:0004672
+SSO:000008686 Ubiquinone biosynthesis regulatory protein kinase UbiB > GO:regulation of ubiquinone biosynthetic process ; GO:0010795
+SSO:000008686 Ubiquinone biosynthesis regulatory protein kinase UbiB > GO:ubiquinone biosynthetic process ; GO:0006744
+SSO:000008734 Uncharacterized iron compound ABC uptake transporter, substrate-binding protein > GO:extracellular region ; GO:0005576
+SSO:000008734 Uncharacterized iron compound ABC uptake transporter, substrate-binding protein > GO:transport ; GO:0006810
+SSO:000008735 Uncharacterized metabolite ABC transporter in Enterobacteriaceae, ATP-binding protein EC-YbbA > GO:ATP binding ; GO:0005524
+SSO:000008735 Uncharacterized metabolite ABC transporter in Enterobacteriaceae, ATP-binding protein EC-YbbA > GO:ATPase activity ; GO:0016887
+SSO:000008735 Uncharacterized metabolite ABC transporter in Enterobacteriaceae, ATP-binding protein EC-YbbA > GO:transport ; GO:0006810
+SSO:000009170 iron-chelator utilization protein > GO:FAD binding ; GO:0071949
+SSO:000009170 iron-chelator utilization protein > GO:cellular response to nickel ion ; GO:0071289
+SSO:000009170 iron-chelator utilization protein > GO:cytosol ; GO:0005829
+SSO:000009170 iron-chelator utilization protein > GO:ferric-chelate reductase (NADPH) activity ; GO:0052851
+SSO:000009170 iron-chelator utilization protein > GO:flavin adenine dinucleotide binding ; GO:0050660
+SSO:000009170 iron-chelator utilization protein > GO:iron assimilation ; GO:0033212
