@@ -19,9 +19,8 @@
   <copyField source="feature_id" dest="text"/>
   <copyField source="feature_type" dest="text"/>
   <copyField source="annotation" dest="text"/>
-  <copyField source="go" dest="text"/>
-  <copyField source="go_evidence" dest="text"/>
-  <copyField source="ec" dest="text"/>
+  <copyField source="ontology" dest="text"/>
+  <copyField source="ontology_evidence" dest="text"/>
 
   <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
   <fieldType name="tdates" class="solr.TrieDateField" precisionStep="6" positionIncrementGap="0" multiValued="true"/>
